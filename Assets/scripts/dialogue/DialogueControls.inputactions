@@ -1,0 +1,76 @@
+{
+    "name": "DialogueControls",
+    "maps": [
+        {
+            "name": "controls",
+            "id": "85f19349-7940-46c1-b574-04c90808b28f",
+            "actions": [
+                {
+                    "name": "move",
+                    "type": "Value",
+                    "id": "d5c155c4-60f8-4bbc-a98c-00d7b5824d69",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "submit",
+                    "type": "Button",
+                    "id": "0d1d1a46-035d-47af-b570-e0ae906d9f8f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "97322cda-99a0-44ad-b2db-09c029229556",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "befcc396-520b-4ef2-a4b8-38993e8f88eb",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "cad8bd9c-d6fc-410a-a76d-3ca54b66a710",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "158cc76c-c637-49a8-bb0e-bce390ac75b1",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

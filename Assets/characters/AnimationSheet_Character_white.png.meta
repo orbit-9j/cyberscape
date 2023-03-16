@@ -1,0 +1,1245 @@
+fileFormatVersion: 2
+guid: e9af683753d46764bb027801f7c0366a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 256
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c697bb8fc18c564a9048eedac0e1f20
+      internalID: -488820414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 256
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a3728a7d7ef4f42bb0a01ca9a79238
+      internalID: 1600341636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 224
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d98cdd69fcc4c24081cb66122dcfdb5
+      internalID: 2081839910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_3
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 224
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db4638eb3b8c4448b9c7830b6bcd9c5
+      internalID: 1529958840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 192
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f64758664ba09489d706f229990e66
+      internalID: -611831525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_5
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 192
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4183a4643d8ce264ca0d54572a9c2f01
+      internalID: -22737607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 192
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac549111eb8e884cbdd645c69660392
+      internalID: 1288415352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_7
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 192
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3438a6013f5edfb498351afcd7a9f0aa
+      internalID: -223114796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 160
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8268af4b9ae05409957e7f70f71a91
+      internalID: -1797634562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_9
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 160
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5f1678373adf7429a11f637712c8f7
+      internalID: 288297695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 160
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab722acfeec0cb540abc395df7d6defa
+      internalID: -284193373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 160
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff965f211ddd7049b92401deb20abc6
+      internalID: 321704831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_12
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 160
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53858340d1ded8e48b2bd1a3460e7192
+      internalID: -1206184496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_13
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 160
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f561550a67b92468df83217ce9f1a4
+      internalID: -1820334728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_14
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 160
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbecbcdaaf416e241b24e5773cf7e036
+      internalID: -318744973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_15
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 160
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86db76a02d6e0ca48b3ae7cc91eb364d
+      internalID: 1872082811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 128
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729b0ef7a675b3c4fa15453ba4fa41f3
+      internalID: -1066335488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_17
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 128
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7742133f5644c574a919fa25e302dd55
+      internalID: -1962319582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_18
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 128
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b5e43467d1be24eb81b2516869d753
+      internalID: 1443350118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 128
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1382d5bb185f847bc09cb0ecccfe59
+      internalID: -270935807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_20
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 128
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbf51befac2ea140804d9baa3a0a942
+      internalID: -269051290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_21
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 128
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a1fa37e1139a54bb2ab8e6d4f6f21a
+      internalID: 823645634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_22
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 96
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8146dde91c2b404e9fa01c4cf9788f8
+      internalID: -36669265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_23
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 96
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1f2f5dcd80b344783c59c18af972e6
+      internalID: -990727016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_24
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 98
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9380bd603f47f45870772ecc6ec481
+      internalID: -72988956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 77
+        width: 18
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7529e9d59e010f40b7dcd44d2fe85e7
+      internalID: 123013404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_26
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 99
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae9361a6533c494cbb9f0292e4e53d4
+      internalID: -146198750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_27
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 96
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3872a6366f4d0f543afde22f8043ef37
+      internalID: -934914130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_28
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 96
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66411605a31096c49b7812de2ef6e2d8
+      internalID: 26082811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_29
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 96
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e4ca421deccb1439f2542e7599d5fe
+      internalID: 1561176869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_30
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 64
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecd59ffc0beab54cb412e920b54d230
+      internalID: 2107333569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_31
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 64
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8ea4dd2bae0cd469321ca99b44875c
+      internalID: -1561869698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_32
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 65
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 308a278e77ef18843af87efc92a41192
+      internalID: 946093118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_33
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 32
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44bfee09c795774591dd421a14a7e7d
+      internalID: -798273531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_34
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 32
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d781bd25a3645f4429f0ef12209d90f9
+      internalID: -639432173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_35
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 32
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3299f2e50f073304a88073de9b05908b
+      internalID: 1166167668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_36
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 21
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b3a37b02d4ed3418a569097eeb2336
+      internalID: 514883738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_37
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133dcb84440a1f74eb303611f1b46060
+      internalID: -2106169600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_38
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 32
+        width: 29
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37074ed2cc972d246ae805e6ab8b48f7
+      internalID: 739047327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_39
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 32
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c7d6670af5a164fa3dd6ff8990b68c
+      internalID: -1329315398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_40
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 32
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c71b7937216b14785f52214afb76e2
+      internalID: -1771912130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_41
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd21242cd3c7414782a1ebe6601788d
+      internalID: -1614017273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_42
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd5c8da1efb7f046a22c69b6e9e4f78
+      internalID: 867610512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_43
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433d577948799c94fb0052542f277aa3
+      internalID: 1191170017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_44
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a0232c48944744a84738f19782e4b9
+      internalID: 52518740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_45
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c6a052b954b96418aba4d4c794074d
+      internalID: 543381301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_46
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d6a4f054bae0d4f93c10b6fee23b06
+      internalID: -937850490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_47
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 192
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7307ad1f33e28f44a91640594321c78a
+      internalID: -279174226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_48
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 192
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 098299e7c79d22c418efd046661e6462
+      internalID: -207599489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_49
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 192
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb80a9ed99e39e4fbf0e23e45d1025d
+      internalID: -605631617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AnimationSheet_Character_white_50
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 192
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8cca846ffb0ab4aa2ff716b7fa64c5
+      internalID: 1811385795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AnimationSheet_Character_white_24: -72988956
+      AnimationSheet_Character_white_18: 1443350118
+      AnimationSheet_Character_white_36: 514883738
+      AnimationSheet_Character_white_14: -318744973
+      AnimationSheet_Character_white_17: -1962319582
+      AnimationSheet_Character_white_35: 1166167668
+      AnimationSheet_Character_white_1: 1600341636
+      AnimationSheet_Character_white_20: -269051290
+      AnimationSheet_Character_white_9: 288297695
+      AnimationSheet_Character_white_44: 52518740
+      AnimationSheet_Character_white_23: -990727016
+      AnimationSheet_Character_white_49: -605631617
+      AnimationSheet_Character_white_38: 739047327
+      AnimationSheet_Character_white_0: -488820414
+      AnimationSheet_Character_white_7: -223114796
+      AnimationSheet_Character_white_10: -284193373
+      AnimationSheet_Character_white_21: 823645634
+      AnimationSheet_Character_white_13: -1820334728
+      AnimationSheet_Character_white_32: 946093118
+      AnimationSheet_Character_white_27: -934914130
+      AnimationSheet_Character_white_40: -1771912130
+      AnimationSheet_Character_white_30: 2107333569
+      AnimationSheet_Character_white_33: -798273531
+      AnimationSheet_Character_white_26: -146198750
+      AnimationSheet_Character_white_46: -937850490
+      AnimationSheet_Character_white_45: 543381301
+      AnimationSheet_Character_white_48: -207599489
+      AnimationSheet_Character_white_43: 1191170017
+      AnimationSheet_Character_white_19: -270935807
+      AnimationSheet_Character_white_28: 26082811
+      AnimationSheet_Character_white_42: 867610512
+      AnimationSheet_Character_white_11: 321704831
+      AnimationSheet_Character_white_31: -1561869698
+      AnimationSheet_Character_white_37: -2106169600
+      AnimationSheet_Character_white_29: 1561176869
+      AnimationSheet_Character_white_8: -1797634562
+      AnimationSheet_Character_white_50: 1811385795
+      AnimationSheet_Character_white_5: -22737607
+      AnimationSheet_Character_white_3: 1529958840
+      AnimationSheet_Character_white_6: 1288415352
+      AnimationSheet_Character_white_47: -279174226
+      AnimationSheet_Character_white_39: -1329315398
+      AnimationSheet_Character_white_41: -1614017273
+      AnimationSheet_Character_white_25: 123013404
+      AnimationSheet_Character_white_34: -639432173
+      AnimationSheet_Character_white_2: 2081839910
+      AnimationSheet_Character_white_22: -36669265
+      AnimationSheet_Character_white_16: -1066335488
+      AnimationSheet_Character_white_4: -611831525
+      AnimationSheet_Character_white_15: 1872082811
+      AnimationSheet_Character_white_12: -1206184496
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
