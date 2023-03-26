@@ -52,12 +52,12 @@ public class PhishingPuzzleController : MonoBehaviour
         }
 
         //initialise grid
-        for (int row = 0; row < wordGridColumns; row++)
+        for (int row = 0; row < wordGridRows; row++) //was wordGridColumns for some reason??
         {
             wordGrid.Add(new List<string>());
-            for (int col = 0; col < wordGridRows; col++)
+            for (int col = 0; col < wordGridColumns; col++) //was wordGridRows for some reason??
             {
-                wordGrid[row].Add("a"); //it's "a" for debug, it's supposed to be an empty string normally but i may forget to remove this code so i'm adding this comment to explain why it's "a" - because unity keeps freezing i never got as far as debugging the word grid
+                wordGrid[row].Add("");
             }
         }
 
@@ -133,11 +133,11 @@ public class PhishingPuzzleController : MonoBehaviour
             if (numOfAddedWords < list.Count) //ends after all words in the list have been added - prevents an endless loop when a list has ran out of words but there are still empty cells in the grid
             {
                 //select random grid cell
-                int x = Random.Range(0, wordGridColumns);
-                int y = Random.Range(0, wordGridRows);
+                int x = Random.Range(0, wordGridRows); //was wordGridColumns for some reason??
+                int y = Random.Range(0, wordGridColumns); //was wordGridRows for some reason??
                 //Debug.Log("x: " + x.ToString() + ", y: " + y.ToString());
 
-                if (wordGrid[x][y] == "a")// Check if cell is empty
+                if (wordGrid[x][y] == "")// Check if cell is empty
                 {
                     if (addedWords.Contains(list[i])) //check if this word has already been added
                     {

@@ -8,7 +8,9 @@ using System.Linq;
 order to write a convincing phishing email. the player is required to select words that relate to the clues they read when they 
 interacted with the NPCs on the scene. they have to select all the correct words and none of the incorrect words. if the minigame is
 completed successfully, there will be a phishing email displayed on the screen containing the correct words, and a dialogue box will 
-show to explain what makes this phishing email effective */
+show to explain what makes this phishing email effective 
+
+after the player unlocks the email, they will receive a response with the door code, which they will then be able to type into the keypad screen and unlock the door leading to the next level. the keypad functionality is mostly done but still needs to be hooked up to the door */
 
 //add a timer
 //launch minigame from trigger on info robot rather than from the puzzle controller
@@ -105,7 +107,7 @@ public class PhishingPuzzleMController : MonoBehaviour
     {
         if (acceptInput)
         {
-            /*if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 //column++;
                 column = mod((column + 1), numberOfColumns);
@@ -129,7 +131,7 @@ public class PhishingPuzzleMController : MonoBehaviour
                 //row++;
                 row = mod((row + 1), numberOfRows);
                 HandleSelection();
-            } */
+            }
 
             //weird fix?
             /* if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -155,28 +157,28 @@ public class PhishingPuzzleMController : MonoBehaviour
             } */
 
             //sometimes unity stops being able to understand the controls despite me not changing their code at all, so i have to rewrite them in a way that makes no sense to me but makes sense to unity. go figure.
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                column = mod((column + 1), numberOfRows); //column++;
-                HandleSelection();
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                column = mod((column - 1 + numberOfRows), numberOfRows); //column--;
-                HandleSelection();
-            }
+            /*  if (Input.GetKeyDown(KeyCode.DownArrow))
+             {
+                 column = mod((column + 1), numberOfRows); //column++;
+                 HandleSelection();
+             }
+             else if (Input.GetKeyDown(KeyCode.UpArrow))
+             {
+                 column = mod((column - 1 + numberOfRows), numberOfRows); //column--;
+                 HandleSelection();
+             }
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                row = mod((row - 1 + numberOfColumns), numberOfColumns); //row--;
-                HandleSelection();
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                row = mod((row + 1), numberOfColumns); //row++;
-                HandleSelection();
-            }
-
+             if (Input.GetKeyDown(KeyCode.LeftArrow))
+             {
+                 row = mod((row - 1 + numberOfColumns), numberOfColumns); //row--;
+                 HandleSelection();
+             }
+             else if (Input.GetKeyDown(KeyCode.RightArrow))
+             {
+                 row = mod((row + 1), numberOfColumns); //row++;
+                 HandleSelection();
+             }
+  */
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 AddOrRemoveWord();
@@ -283,7 +285,18 @@ public class PhishingPuzzleMController : MonoBehaviour
 
         foreach (TextMeshProUGUI textPrefab in textboxList)
         {
-            textPrefab.color = Color.white;
+            if (chosenWords.Contains(textPrefab.text))
+            {
+                textPrefab.color = Color.grey;
+                if (selectedTexbox == textPrefab)
+                {
+                    textPrefab.color = Color.yellow;
+                }
+            }
+            else
+            {
+                textPrefab.color = Color.white;
+            }
         }
     }
 
@@ -293,17 +306,31 @@ public class PhishingPuzzleMController : MonoBehaviour
 
         foreach (TextMeshProUGUI text in textboxList) //delete all text prefabs from the screen
         {
-            Destroy(text);
+            Destroy(text.gameObject);
         }
 
+        //instantiate email prefab on the screen
         RectTransform screen = screenObject.GetComponent<RectTransform>();
-
-        //instantiate email prefab on the screen - WHY IS IT INVISIBLE????
         float screenWidth = screen.rect.width;
         float screenHeight = screen.rect.height;
-        TextMeshProUGUI emailObj = Instantiate(textPrefab.GetComponent<TextMeshProUGUI>(), screenObject.transform.position, Quaternion.identity);
+        TextMeshProUGUI emailObj = Instantiate(textPrefab.GetComponent<TextMeshProUGUI>(), screenObject.transform);
         emailObj.rectTransform.sizeDelta = new Vector2(screenWidth, screenHeight);
         emailObj.text = email;
+        emailObj.rectTransform.localPosition = new Vector3(0f, 0f, 0f);
+        emailObj.alignment = TextAlignmentOptions.Left;
+        emailObj.enableWordWrapping = true;
+
+        //calculate the best font size for the email text to allow the text to fill the whole screen without overflowing
+        float fontSize = 200f;
+        emailObj.fontSize = fontSize;
+        emailObj.overflowMode = TextOverflowModes.Truncate;
+        float preferredHeight = emailObj.preferredHeight;
+        while (preferredHeight > screenHeight)
+        {
+            fontSize--;
+            emailObj.fontSize = fontSize;
+            preferredHeight = emailObj.preferredHeight;
+        }
 
         yield return new WaitForSeconds(0.5f);
 
