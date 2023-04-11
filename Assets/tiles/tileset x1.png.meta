@@ -5027,7 +5027,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5035,6 +5035,27 @@ TextureImporter:
       bones: []
       spriteID: f806328ad16eadd498ba0879e1703b95
       internalID: 1118923293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall barrier
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 564
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce9716b16402e34996f4b6e4ebd2d79
+      internalID: 755555943
       vertices: []
       indices: 
       edges: []
@@ -5124,6 +5145,7 @@ TextureImporter:
       tileset x1_22: -781371183
       tileset x1_148: -2042974706
       tileset x1_121: -743086479
+      wall barrier: 755555943
       tileset x1_125: -1517230272
       tileset x1_35: -914328183
       tileset x1_107: 1287236601

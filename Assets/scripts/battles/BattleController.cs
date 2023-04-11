@@ -1,58 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BattleController : MonoBehaviour
 {
     /* this script controls the flow of battle and the states of the parties involved. the exact architecture of the various battle scripts
     is still in the works, these are some ideas on how it could be done: */
 
-    private bool playerTurn = true;
+    private GameManager gameManager;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private GameObject enemyObject;
-    private BattlePlayer player;
+    public BattlePlayer player;
     private BattleEnemy enemy;
 
-    private int streak = 0;
-    private bool playerWin = false;
+    public BattleCharacter opponent;
+    public BattleCharacter currentCharacter;
 
+    public TextMeshProUGUI streakText;
+    private bool playerWin = false;
 
     //option to flee and try again
 
     public void Start()
     {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+        gameManager.playerMoves = false;
         gameObject.SetActive(true);
         player = playerObject.GetComponent<BattlePlayer>();
         enemy = enemyObject.GetComponent<BattleEnemy>();
-        player.StartTurn();
 
         //debug
-        /* enemy.TakeDamage(5);
-        Debug.Log("health left: " + enemy.totalHealth + "/60"); */
+        //enemy.TakeDamage(5);
+        //Debug.Log("health left: " + enemy.totalHealth + "/60");
+
+        player.turn = true; //start off the battle with player's turn
+        opponent = enemy;
+
+        StartCoroutine(StartTurn());
+    }
+
+    private IEnumerator StartTurn()
+    {
+        if (player.turn)
+        {
+            player.StartTurn();
+
+            while (!player.minigame.minigameEnded)
+            {
+                yield return null;
+            }
+
+            player.EndTurn();
+            enemy.turn = true;
+            opponent = player;
+            currentCharacter = enemy;
+        }
+        else
+        {
+            enemy.StartTurn();
+            while (!enemy.minigame.minigameEnded)
+            {
+                yield return null;
+            }
+            enemy.EndTurn();
+            player.turn = true;
+            opponent = enemy;
+            currentCharacter = player;
+        }
+
+        //add exit condition (while player or enemy alive)
+        StartCoroutine(StartTurn());
     }
 
     void Update()
     {
         //keep track of time - give time bar own script?
-
-        if (Input.GetKeyDown(KeyCode.Space)) //should later be controlled with code rather than key input, on the basis of waiting for a turn to finish. maybe use pace bar to attack?
-        {
-            //need to check if character has completed their turn before being able to switch
-
-            if (playerTurn)
-            {
-                playerTurn = false;
-                player.EndTurn();
-                enemy.StartTurn();
-
-            }
-            else
-            {
-                playerTurn = true;
-                player.StartTurn();
-                enemy.EndTurn();
-            }
-        }
     }
 
     private void HandleStreak() //where do i call it?
@@ -87,8 +110,13 @@ public class BattleController : MonoBehaviour
         }
     }
 
-    private void HandleBar(float totalWidth, int oldValue, int valueChange)
+    /* private void HandleBar(float totalWidth, int oldValue, int valueChange)
     {
         //set new bar width proportionate to oldValue-valueChange and the total width of the object
+    } */
+
+    private void EndBattle()
+    {
+        gameManager.playerMoves = true;
     }
 }

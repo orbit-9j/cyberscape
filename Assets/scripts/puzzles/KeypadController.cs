@@ -9,9 +9,10 @@ public class KeypadController : MonoBehaviour
     /* this script will be used in the phishing scene as the last puzzle. it allows the user to enter the code they got from the phishing
     puzzle to unlock the door to the next scene */
 
+    private GameManager gameManager;
+
     [SerializeField] private Button[] buttons; // Array of all the keypad buttons
     [SerializeField] private Button esc;
-    public float buttonPressDuration = 0.1f; // duration in seconds for which the button should be "pressed"
 
     private Sprite[] defaultSprites; //default sprites of all the buttons
     private Sprite[] pressedSprites; // pressed sprites of all the buttons
@@ -24,11 +25,15 @@ public class KeypadController : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+
         //store the default and pressed sprites of all the buttons
         defaultSprites = new Sprite[buttons.Length];
         pressedSprites = new Sprite[buttons.Length];
         pinText.text = "";
         completed = false;
+
+        //assign sprites to each button
         for (int i = 0; i < buttons.Length; i++)
         {
             defaultSprites[i] = buttons[i].image.sprite;
@@ -48,7 +53,9 @@ public class KeypadController : MonoBehaviour
                 pinText.text = "";
                 pinText.color = Color.white;
                 esc.image.sprite = escPressedSprite;
-                StartCoroutine(ResetButtonSprite(esc, buttonPressDuration, false));
+                //StartCoroutine(ResetButtonSprite(esc, buttonPressDuration, false));
+                //ResetButtonSprite(false, esc);
+                gameManager.UnpressButton(esc, escDefaultSprite);
             }
 
             for (int i = 0; i < 10; i++)
@@ -75,22 +82,41 @@ public class KeypadController : MonoBehaviour
                         else { pinText.color = Color.red; }
                     }
 
-                    StartCoroutine(ResetButtonSprite(buttons[buttonIndex], buttonPressDuration, true));
+                    //StartCoroutine(ResetButtonSprite(buttons[buttonIndex], buttonPressDuration, true));
+                    //ResetButtonSprite(true, buttons[buttonIndex]);
+                    gameManager.UnpressButton(buttons[buttonIndex], defaultSprites[System.Array.IndexOf(buttons, buttons[buttonIndex])]);
                 }
             }
         }
     }
-
-    private IEnumerator ResetButtonSprite(Button button, float duration, bool number)
-    {
-        yield return new WaitForSeconds(duration);
-        if (number)
-        {
-            button.image.sprite = defaultSprites[System.Array.IndexOf(buttons, button)]; //revert the sprite of the button back to the default sprite
-        }
-        else
-        {
-            button.image.sprite = escDefaultSprite;
-        }
-    }
 }
+
+/* private IEnumerator ResetButtonSprite(Button button, float duration, bool number)
+{
+    yield return new WaitForSeconds(duration);
+    if (number)
+    {
+        button.image.sprite = defaultSprites[System.Array.IndexOf(buttons, button)]; //revert the sprite of the button back to the default sprite
+    }
+    else
+    {
+        button.image.sprite = escDefaultSprite;
+    }
+} */
+
+
+//! do i even need the selection? i can add a sprite parameter and pass that in. ACTUALLY, i don't even need this whole method lol
+/* private ResetButtonSprite(bool number, Button button)
+{
+
+    if (number)
+    {
+        gameManager.UnpressButton(button, defaultSprites[System.Array.IndexOf(buttons, button)]);//revert the sprite of the button back to the default sprite
+    }
+    else
+    {
+        gameManager.UnpressButton(button, escDefaultSprite);
+    }
+
+}
+} */

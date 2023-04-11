@@ -155,7 +155,7 @@ TextureImporter:
         width: 7
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,6 +163,111 @@ TextureImporter:
       bones: []
       spriteID: 48affa1334de2764481d5e092069a0fe
       internalID: 1668304577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiny potted plant
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 97
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50caec363859c064e8dacb56626480be
+      internalID: -1080730654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: miniature potted plant
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 97
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051c173d738813442822a4400f100fbf
+      internalID: -116117291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cofee cup
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 17
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb49550397a7794582bff203dde88c9
+      internalID: 144330786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coffee cup
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 17
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709d4fb3afc6c9043be5ecdb85fa0c5d
+      internalID: 1271572062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coffee cu
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 17
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5daf1e886299e64fa5c1a724b794c16
+      internalID: 2052725600
       vertices: []
       indices: 
       edges: []
@@ -178,8 +283,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      coffee cu: 2052725600
+      cofee cup: 144330786
+      tiny potted plant: -1080730654
+      miniature potted plant: -116117291
       TopDownHouse_SmallItems_1: 1334353804
       TopDownHouse_SmallItems_0: -214718860
+      coffee cup: 1271572062
       TopDownHouse_SmallItems_2: 1668304577
   spritePackingTag: 
   pSDRemoveMatte: 0

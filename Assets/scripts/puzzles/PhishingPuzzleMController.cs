@@ -17,6 +17,7 @@ after the player unlocks the email, they will receive a response with the door c
 
 public class PhishingPuzzleMController : MonoBehaviour
 {
+    private GameManager gameManager;
     [SerializeField] private PhishingPuzzleController script; //reference to the script that sets the stage for the minigame
     public GameObject screenObject; //screen on which the words will be displayed
 
@@ -54,6 +55,8 @@ public class PhishingPuzzleMController : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+
         //initialise counters
         correctWords = script.tempCorrectWords;
         incorrectWords = script.tempIncorrectWords;
@@ -110,72 +113,72 @@ public class PhishingPuzzleMController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 //column++;
-                column = mod((column + 1), numberOfColumns);
+                column = gameManager.modInt((column + 1), numberOfColumns);
                 HandleSelection();
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 //column--;
-                column = mod((column - 1 + numberOfColumns), numberOfColumns);
+                column = gameManager.modInt((column - 1 + numberOfColumns), numberOfColumns);
                 HandleSelection();
             }
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 //row--;
-                row = mod((row - 1 + numberOfRows), numberOfRows);
+                row = gameManager.modInt((row - 1 + numberOfRows), numberOfRows);
                 HandleSelection();
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 //row++;
-                row = mod((row + 1), numberOfRows);
+                row = gameManager.modInt((row + 1), numberOfRows);
                 HandleSelection();
             }
 
             //weird fix?
             /* if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                column = mod((column + 1), numberOfColumns); //column++;
+                column = gameManager.modInt((column + 1), numberOfColumns); //column++;
                 HandleSelection();
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                column = mod((column - 1 + numberOfColumns), numberOfColumns); //column--;
+                column = gameManager.modInt((column - 1 + numberOfColumns), numberOfColumns); //column--;
                 HandleSelection();
             }
 
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                row = mod((row - 1 + numberOfRows), numberOfRows); //row--;
+                row = gameManager.modInt((row - 1 + numberOfRows), numberOfRows); //row--;
                 HandleSelection();
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                row = mod((row + 1), numberOfRows); //row++;
+                row = gameManager.modInt((row + 1), numberOfRows); //row++;
                 HandleSelection();
             } */
 
             //sometimes unity stops being able to understand the controls despite me not changing their code at all, so i have to rewrite them in a way that makes no sense to me but makes sense to unity. go figure.
             /*  if (Input.GetKeyDown(KeyCode.DownArrow))
              {
-                 column = mod((column + 1), numberOfRows); //column++;
+                 column = gameManager.modInt((column + 1), numberOfRows); //column++;
                  HandleSelection();
              }
              else if (Input.GetKeyDown(KeyCode.UpArrow))
              {
-                 column = mod((column - 1 + numberOfRows), numberOfRows); //column--;
+                 column = gameManager.modInt((column - 1 + numberOfRows), numberOfRows); //column--;
                  HandleSelection();
              }
 
              if (Input.GetKeyDown(KeyCode.LeftArrow))
              {
-                 row = mod((row - 1 + numberOfColumns), numberOfColumns); //row--;
+                 row = gameManager.modInt((row - 1 + numberOfColumns), numberOfColumns); //row--;
                  HandleSelection();
              }
              else if (Input.GetKeyDown(KeyCode.RightArrow))
              {
-                 row = mod((row + 1), numberOfColumns); //row++;
+                 row = gameManager.modInt((row + 1), numberOfColumns); //row++;
                  HandleSelection();
              }
   */
@@ -309,38 +312,13 @@ public class PhishingPuzzleMController : MonoBehaviour
             Destroy(text.gameObject);
         }
 
-        //instantiate email prefab on the screen
-        RectTransform screen = screenObject.GetComponent<RectTransform>();
-        float screenWidth = screen.rect.width;
-        float screenHeight = screen.rect.height;
-        TextMeshProUGUI emailObj = Instantiate(textPrefab.GetComponent<TextMeshProUGUI>(), screenObject.transform);
-        emailObj.rectTransform.sizeDelta = new Vector2(screenWidth, screenHeight);
-        emailObj.text = email;
-        emailObj.rectTransform.localPosition = new Vector3(0f, 0f, 0f);
-        emailObj.alignment = TextAlignmentOptions.Left;
-        emailObj.enableWordWrapping = true;
-
-        //calculate the best font size for the email text to allow the text to fill the whole screen without overflowing
-        float fontSize = 200f;
-        emailObj.fontSize = fontSize;
-        emailObj.overflowMode = TextOverflowModes.Truncate;
-        float preferredHeight = emailObj.preferredHeight;
-        while (preferredHeight > screenHeight)
-        {
-            fontSize--;
-            emailObj.fontSize = fontSize;
-            preferredHeight = emailObj.preferredHeight;
-        }
+        TextMeshProUGUI emailObj = gameManager.InstantiateText(screenObject, textPrefab, email);
+        gameManager.FitToSize(screenObject, emailObj);
 
         yield return new WaitForSeconds(0.5f);
 
         //add dialogue explaining the "generated" email
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
         DialogueManager.GetInstance().JumpToKnot(knotName);
-    }
-
-    int mod(int x, int m) //custom mod function since c# modulo (%) doesn't behave as modulo
-    {
-        return (x % m + m) % m;
     }
 }
