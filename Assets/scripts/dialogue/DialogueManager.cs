@@ -17,7 +17,13 @@ public class DialogueManager : MonoBehaviour
     dialogue afterwards, to add more flexibility to how lessons are taught and how puzzles are integrated */
 
     //singleton class 
+
     private static DialogueManager instance;
+
+    private GameManager gameManager;
+
+    [SerializeField] private List<GameObject> puzzles; //list of the puzzles to be played in the scene
+
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
@@ -25,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private Animator portraitAnimator;
     [SerializeField] private float typingSpeed = 0.03f;
-    private Story currentStory;
+    public Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
 
     [Header("Choices UI")]
@@ -36,19 +42,17 @@ public class DialogueManager : MonoBehaviour
     private Animator layoutAnimator;
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
-    private const string LAYOUT_TAG = "layout";
     private const string PUZZLE_TAG = "puzzle"; //tag to indicate puzzle start
     private Coroutine displayLineCoroutine;
     private const string layoutYou = "right";
     private const string layoutThem = "left";
 
-    [Header("Puzzles")] //references to the puzzles to be played
-    //it would be a good idea to make the puzzles derive from a parent puzzle class. it could have the puzzleIsPlaying variable and set panel to active on start etc to make the puzzle scripts less redundant
-    [SerializeField] private GameObject bruteForcePuzzle;
-    [SerializeField] private GameObject caesarCipherDemoPuzzle;
-    [SerializeField] private GameObject battlePanel;
     public bool puzzlePlaying;
     private GameObject currentPuzzle;
+
+    public string currentKnotName = "";
+
+
 
     private void Awake()
     {
@@ -66,6 +70,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 
@@ -91,6 +96,8 @@ public class DialogueManager : MonoBehaviour
         layoutAnimator.Play(layoutThem);
         //choicesPanel.SetActive(false); //added to change overlay
 
+
+
         ContinueStory();
         //dialogueText.text = currentStory.currentText;
     }
@@ -106,6 +113,21 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown(KeyCode.Space))
         {
             ContinueStory();
+        }
+
+        /*  if (Input.GetKeyDown(KeyCode.LeftArrow))
+         {
+             //show previous line (idk if ink has that functionality)
+         } */
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (currentPuzzle != null)
+            {
+                currentPuzzle.SetActive(false);
+                gameManager.playerMoves = true;
+            }
+            ExitDialogueMode();
         }
     }
 
@@ -151,38 +173,27 @@ public class DialogueManager : MonoBehaviour
             switch (tagKey)
             {
                 case SPEAKER_TAG:
-                    displayNameText.text = tagValue;
+                    if (tagValue.ToLower() == "you")
+                    {
+                        displayNameText.text = gameManager.playerName;
+                        layoutAnimator.Play(layoutYou);
+                    }
+                    else if (tagValue.ToLower() == "console")
+                    {
+                        displayNameText.text = gameManager.consoleName;
+                        layoutAnimator.Play(layoutThem);
+                    }
+                    else
+                    {
+                        displayNameText.text = tagValue;
+                        layoutAnimator.Play(layoutThem);
+                    }
                     break;
                 case PORTRAIT_TAG:
                     portraitAnimator.Play(tagValue);
                     break;
-                case LAYOUT_TAG:
-                    // compare what tag variable is used and play the corresponding layout animation
-                    if (tagValue == "layout_them")
-                    {
-                        layoutAnimator.Play(layoutThem);
-                    }
-                    else if (tagValue == "layout_you")
-                    {
-                        layoutAnimator.Play(layoutYou);
-                    }
-                    break;
                 case PUZZLE_TAG: //controls when puzzles start and end
-                    if (tagValue == "bruteForcePuzzle")
-                    {
-                        currentPuzzle = bruteForcePuzzle;
-                        StartCoroutine(WaitForPuzzle());
-                    }
-                    else if (tagValue == "caesarCipherDemo")
-                    {
-                        currentPuzzle = caesarCipherDemoPuzzle;
-                        caesarCipherDemoPuzzle.GetComponent<CaesarCipherDemo>().Start();
-                    }
-                    else if (tagValue == "battle")
-                    {
-                        currentPuzzle = battlePanel;
-                        battlePanel.GetComponent<BattleController>().Start();
-                    }
+                    PlayPuzzle(tagValue);
                     if (tagValue == "closePuzzle")
                     {
                         currentPuzzle.SetActive(false);
@@ -254,14 +265,37 @@ public class DialogueManager : MonoBehaviour
     public void JumpToKnot(string knotName) //adds capability for te dialogue manager to start dialogue at a certain knot in the file, since each scene has one dialogue file for organisation purposes
     {
         currentStory.ChoosePathString(knotName);
+        currentKnotName = knotName;
+
         ContinueStory();
     }
 
-    private IEnumerator WaitForPuzzle() //waits for te brute force puzzle to complete. if other puzzles require this function, i will rewrite it to pass the puzzle as a parameter into the function
+    public void JumpToKnot(string knotName, List<string> variableNames, List<string> variableValues)
     {
-        puzzlePlaying = true;
-        bruteForcePuzzle.GetComponent<BruteForcePuzzleController>().Start();
-        yield return new WaitUntil(() => bruteForcePuzzle.GetComponent<BruteForcePuzzleController>().completed);
-        puzzlePlaying = false;
+        currentStory.ChoosePathString(knotName);
+        currentKnotName = knotName;
+
+        for (int i = 0; i < variableNames.Count; i++)
+        {
+            currentStory.variablesState[variableNames[i]] = variableValues[i];
+        }
+
+        ContinueStory();
+    }
+
+
+    private void PlayPuzzle(string tagValue)
+    {
+        if (puzzles != null)
+        {
+            foreach (GameObject puzzle in puzzles)
+            {
+                if (puzzle.name == tagValue)
+                {
+                    currentPuzzle = puzzle;
+                    puzzle.SetActive(true);
+                }
+            }
+        }
     }
 }

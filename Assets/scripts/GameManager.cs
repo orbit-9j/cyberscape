@@ -12,13 +12,15 @@ public class GameManager : MonoBehaviour
 
     public bool playerMoves;
 
-    //player name
+    public string playerName = "You";
+    public string consoleName = "Console";
 
 
     void Awake()
     {
         Instance = this;
         playerMoves = true;
+        DontDestroyOnLoad(gameObject);
     }
 
     //some methods that are used in more than one script
@@ -101,9 +103,8 @@ public class GameManager : MonoBehaviour
 
     public void PressUnpressButton(Button buttonObj, Sprite defaultSprite, Sprite pressedSprite)
     {
-        float buttonPressDuration = 0.1f; // duration in seconds for which the button should be "pressed"
         buttonObj.image.sprite = pressedSprite;
-        StartCoroutine(ResetButtonSprite(buttonPressDuration, buttonObj, defaultSprite));
+        StartCoroutine(ResetButtonSprite(0.1f, buttonObj, defaultSprite));
     }
 
     public IEnumerator FlashText(TextMeshProUGUI textObj, Color originalColour, Color newColour)
@@ -112,6 +113,38 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         textObj.color = originalColour;
     }
+
+    //https://www.c-sharpcorner.com/article/caesar-cipher-in-c-sharp/ 17/02/2023
+    public char cipher(char ch, int key)
+    {
+        if (!char.IsLetter(ch))
+        {
+
+            return ch;
+        }
+
+        char d = char.IsUpper(ch) ? 'A' : 'a';
+        return (char)((((ch + key) - d) % 26) + d);
+
+    }
+
+    public string Encipher(string input, int key)
+    {
+        string output = string.Empty;
+
+        foreach (char ch in input)
+        {
+            output += cipher(ch, key);
+        }
+
+        return output;
+    }
+
+    public string Decipher(string input, int key)
+    {
+        return Encipher(input, 26 - key);
+    }
+    //--------------------------------------------
 
     //https://www.youtube.com/watch?v=ii31ObaAaJo 12/02/2023
     //public SaveManager saveManager;

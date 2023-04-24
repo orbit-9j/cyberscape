@@ -15,10 +15,10 @@ after the player unlocks the email, they will receive a response with the door c
 //add a timer
 //launch minigame from trigger on info robot rather than from the puzzle controller
 
-public class PhishingPuzzleMController : MonoBehaviour
+public class PhishingPuzzle : MonoBehaviour
 {
     private GameManager gameManager;
-    [SerializeField] private PhishingPuzzleController script; //reference to the script that sets the stage for the minigame
+    [SerializeField] private PhishingSceneManager script; //reference to the script that sets the stage for the minigame
     public GameObject screenObject; //screen on which the words will be displayed
 
     //grid variables
@@ -51,28 +51,28 @@ public class PhishingPuzzleMController : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] private string knotName;
 
+    //dialogue stuff
+    public List<string> variableNames;
+    public List<string> variableValues;
+
     private bool acceptInput = true;
 
-    void Start()
+    public void Start()
     {
+        gameObject.SetActive(true);
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+        gameManager.playerMoves = false;
 
         //initialise counters
-        correctWords = script.tempCorrectWords;
+        correctWords = script.correctWords;
         incorrectWords = script.tempIncorrectWords;
         totalCorrectWords = correctWords.Count;
         totalIncorrectWords = incorrectWords.Count;
         correctWordsCounterText.text = "correct words: 0/" + totalCorrectWords;
         incorrectWordsCounterText.text = "incorrect words: 0/" + totalIncorrectWords;
 
-        email = script.emails[script.clueFileNum];
+        email = script.email;
         wordGrid = script.wordGrid;
-
-        /* numberOfColumns = wordGrid.Count;
-        numberOfRows = wordGrid[0].Count; */
-
-        /* numberOfRows = wordGrid.Count;
-        numberOfColumns = wordGrid[0].Count; */
 
         numberOfRows = script.wordGridRows;
         numberOfColumns = script.wordGridColumns;
@@ -96,7 +96,7 @@ public class PhishingPuzzleMController : MonoBehaviour
 
         //Debug.Log("number of columns: " + numberOfColumns.ToString() + ", number of rows: " + numberOfRows.ToString());
         selectedText = wordGrid[row][column];
-        Debug.Log("selected text: " + selectedText);
+        //Debug.Log("selected text: " + selectedText);
         textboxList = gameObject.GetComponentsInChildren<TextMeshProUGUI>().Where(child => child.gameObject.name == "text(Clone)").ToArray();
         /* foreach (TextMeshProUGUI text in textboxList)
         {
@@ -136,53 +136,7 @@ public class PhishingPuzzleMController : MonoBehaviour
                 HandleSelection();
             }
 
-            //weird fix?
-            /* if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                column = gameManager.modInt((column + 1), numberOfColumns); //column++;
-                HandleSelection();
-            }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                column = gameManager.modInt((column - 1 + numberOfColumns), numberOfColumns); //column--;
-                HandleSelection();
-            }
-
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                row = gameManager.modInt((row - 1 + numberOfRows), numberOfRows); //row--;
-                HandleSelection();
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                row = gameManager.modInt((row + 1), numberOfRows); //row++;
-                HandleSelection();
-            } */
-
-            //sometimes unity stops being able to understand the controls despite me not changing their code at all, so i have to rewrite them in a way that makes no sense to me but makes sense to unity. go figure.
-            /*  if (Input.GetKeyDown(KeyCode.DownArrow))
-             {
-                 column = gameManager.modInt((column + 1), numberOfRows); //column++;
-                 HandleSelection();
-             }
-             else if (Input.GetKeyDown(KeyCode.UpArrow))
-             {
-                 column = gameManager.modInt((column - 1 + numberOfRows), numberOfRows); //column--;
-                 HandleSelection();
-             }
-
-             if (Input.GetKeyDown(KeyCode.LeftArrow))
-             {
-                 row = gameManager.modInt((row - 1 + numberOfColumns), numberOfColumns); //row--;
-                 HandleSelection();
-             }
-             else if (Input.GetKeyDown(KeyCode.RightArrow))
-             {
-                 row = gameManager.modInt((row + 1), numberOfColumns); //row++;
-                 HandleSelection();
-             }
-  */
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 AddOrRemoveWord();
             }
@@ -221,7 +175,7 @@ public class PhishingPuzzleMController : MonoBehaviour
             if (textboxList[i].text == selectedText)
             {
                 selectedTexbox = textboxList[i];
-                Debug.Log("selected textbox: " + selectedTexbox.text);
+                //Debug.Log("selected textbox: " + selectedTexbox.text);
             }
         }
     }
@@ -317,8 +271,10 @@ public class PhishingPuzzleMController : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
+        gameManager.playerMoves = true;
+
         //add dialogue explaining the "generated" email
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-        DialogueManager.GetInstance().JumpToKnot(knotName);
+        DialogueManager.GetInstance().JumpToKnot(knotName, variableNames, variableValues);
     }
 }

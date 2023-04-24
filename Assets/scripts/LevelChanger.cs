@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 //https://www.youtube.com/watch?v=-7I0slJyi8g 01/03/2023
 public class LevelChanger : MonoBehaviour
 {
-    public int sceneBuildIndex;
+    [SerializeField] private int sceneBuildIndex;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {

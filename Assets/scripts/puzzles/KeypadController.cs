@@ -10,6 +10,7 @@ public class KeypadController : MonoBehaviour
     puzzle to unlock the door to the next scene */
 
     private GameManager gameManager;
+    [SerializeField] private GameObject door;
 
     [SerializeField] private Button[] buttons; // Array of all the keypad buttons
     [SerializeField] private Button esc;
@@ -20,12 +21,15 @@ public class KeypadController : MonoBehaviour
     private Sprite escPressedSprite;
 
     [SerializeField] private TextMeshProUGUI pinText;
-    private string correctPin = "1987"; //will need to be randomly generated
+    public string correctPin;
+
     public bool completed = false;
 
     private void Start()
     {
+        gameObject.SetActive(true);
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+        gameManager.playerMoves = false;
 
         //store the default and pressed sprites of all the buttons
         defaultSprites = new Sprite[buttons.Length];
@@ -78,6 +82,9 @@ public class KeypadController : MonoBehaviour
                         {
                             pinText.color = Color.green;
                             completed = true;
+                            gameManager.playerMoves = true;
+                            Destroy(door);
+                            gameObject.SetActive(false);
                         }
                         else { pinText.color = Color.red; }
                     }
@@ -91,32 +98,5 @@ public class KeypadController : MonoBehaviour
     }
 }
 
-/* private IEnumerator ResetButtonSprite(Button button, float duration, bool number)
-{
-    yield return new WaitForSeconds(duration);
-    if (number)
-    {
-        button.image.sprite = defaultSprites[System.Array.IndexOf(buttons, button)]; //revert the sprite of the button back to the default sprite
-    }
-    else
-    {
-        button.image.sprite = escDefaultSprite;
-    }
-} */
 
 
-//! do i even need the selection? i can add a sprite parameter and pass that in. ACTUALLY, i don't even need this whole method lol
-/* private ResetButtonSprite(bool number, Button button)
-{
-
-    if (number)
-    {
-        gameManager.UnpressButton(button, defaultSprites[System.Array.IndexOf(buttons, button)]);//revert the sprite of the button back to the default sprite
-    }
-    else
-    {
-        gameManager.UnpressButton(button, escDefaultSprite);
-    }
-
-}
-} */

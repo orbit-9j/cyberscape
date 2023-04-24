@@ -7,6 +7,7 @@ using TMPro;
 public class CaesarCipherDemo : MonoBehaviour
 {
     /* this script is a demonstration of the caesar cipher. it shows how the alphabet shifts with different key values */
+    private GameManager gameManager;
 
     [SerializeField] private TextMeshProUGUI ciphertextAlphabet;
     [SerializeField] private TextMeshProUGUI keyText;
@@ -14,13 +15,23 @@ public class CaesarCipherDemo : MonoBehaviour
     private string alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
     private int displacement = 0;
 
+    private string plaintext = "What kind of sentence?";
+    [SerializeField] private TextMeshProUGUI plaintextMessage;
+    private string ciphertext = "What kind of sentence?";
+    [SerializeField] private TextMeshProUGUI ciphertextMessage;
+
     public bool completed;
     private bool acceptInput;
 
     public void Start()
     {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
         gameObject.SetActive(true);
         ciphertextAlphabet.text = alphabet;
+
+        //start off with the key of 0 so the ciphertext and plaintext are the same
+        plaintextMessage.text = plaintext;
+        ciphertextMessage.text = ciphertext;
     }
 
     void Update()
@@ -35,13 +46,12 @@ public class CaesarCipherDemo : MonoBehaviour
                 displacement += 26;
             }
 
-            if (key < -25)
+            if (key < 0)
             {
-                key = 0;
+                key = 26;
             }
 
-            DisplaceAlphabet();
-            keyText.text = "key: " + key;
+            Finalise();
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -57,8 +67,7 @@ public class CaesarCipherDemo : MonoBehaviour
                 key = 0;
             }
 
-            DisplaceAlphabet();
-            keyText.text = "key: " + key;
+            Finalise();
         }
     }
 
@@ -72,5 +81,12 @@ public class CaesarCipherDemo : MonoBehaviour
             displacedAlphabet.Add(alphabetArray[index]);
         }
         ciphertextAlphabet.text = string.Join(" ", displacedAlphabet);
+    }
+
+    private void Finalise()
+    {
+        DisplaceAlphabet();
+        keyText.text = "key: " + key;
+        ciphertextMessage.text = gameManager.Encipher(plaintext, key);
     }
 }
