@@ -109,6 +109,8 @@ Now let's intercept a message from one of the robots and I will teach you how to
 
 What?! That sounds illegal! #speaker:You  #portrait:you_alarmed 
 You only NOW you realised what we're doing? And anyway, we need to break the cipher to access the elevator again. #speaker:Console  #portrait:console_evilexcited
+
+
 -> DONE
 
 VAR key = 0
@@ -143,9 +145,13 @@ I think I understand that, but what exactly does decryption mean? #speaker:You  
 DECRYPTION is simply converting ciphertext to plaintext. It's just another word for decoding an encoded message. #speaker:Console  #portrait:console_neutral
 Together, an encryption algorithm and a decryption algorithm make up a CIPHER. 
 They both share one key.
-For a brute force attack, we don't need to know the Caesar Cipher decryption algorithm, so I will tell you about it later. #portrait:console_evilexcited
+For a brute force attack, we don't need to know the Caesar Cipher decryption algorithm. #portrait:console_evilexcited
 
-Alright, so how do we perform this attack? #speaker:You  #portrait:you_confused
+But if we did, how would we do it?  #speaker:You  #portrait:you_confused
+
+We just have to shift the alphabet the key number of places, but in the opposite direction! #speaker:Console  #portrait:console_neutral
+
+Alright, so how do we perform the brute force attack? #speaker:You  #portrait:you_confused
 
 First, you will need to remember how many possible keys an English Caesar cipher has. #speaker:Console  #portrait:console_neutral
 
@@ -205,7 +211,7 @@ We can now try to encrypt our own message and send it to the door to open it.
 //have a sequence where we have to decrypt a message to showcase reversible keys
 //explain why brute force is not always efficent - this ciper only has 26 keys but real ciphers can have millions and billions and trillions which takes much much longer to crack
 //frequency analys attack
-//explain substitution cipher vs caesar cipher - finall boss-type puzzle
+//explain substitution cipher vs caesar cipher - final boss-type puzzle
 //why ciphers are needed in irl - encryption of internet traffic (online messaging, online banking, transactions)
 
 === encrypt ===

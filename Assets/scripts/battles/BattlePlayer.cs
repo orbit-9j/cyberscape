@@ -14,15 +14,4 @@ public class BattlePlayer : BattleCharacter
         remainingHealth = totalHealth;
         //character name = player name
     }
-
-    /* void Start()
-    {
-        base.Start();
-    } */
-
-
-    /* void Update()
-    {
-
-    } */
 }

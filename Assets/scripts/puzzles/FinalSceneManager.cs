@@ -6,11 +6,6 @@ public class FinalSceneManager : MonoBehaviour
 {
     private GameManager gameManager;
 
-    //list or individual?
-
-    //player name: dusk, endgame, the end
-    //console name: endgame, the end
-
     [SerializeField] private List<GameObject> triggers;
 
     void Start()
@@ -23,7 +18,7 @@ public class FinalSceneManager : MonoBehaviour
                 "playerName", "consoleName"
             };
 
-            trigger.GetComponent<DialogueTrigger>().variableNames = new List<string>(){
+            trigger.GetComponent<DialogueTrigger>().variableValues = new List<string>(){
                 gameManager.playerName, gameManager.consoleName
             };
         }

@@ -77,7 +77,8 @@ Our end could be avoided if we just returned them!
 Absolutely not! I need their technology to incubate catgirls for my army! #speaker:Long Dusk #portrait:dusk
 
 (from another room) With all due respect chief Dusk, we only have three successful specimens so far. #speaker:Xeno #portrait:xeno
-We are about 10,000 short of a proper army, and at this rate we have an approximately 0.0000% chance of survival in the event of the death ray attack.
+We are about 10,000 short of a proper army, and at this rate we have an approximately 0.0000% chance of survival in the event of 
+the death ray attack.
 
 Right?! We have no time to be messing around here. Before the death ray hits, we gotta- #speaker:Robyn #portrait:robyn
 
@@ -115,7 +116,7 @@ You think you're so smart huh? Well then let me show you the extent of my own in
 
 
 ===win===
-Mastew Dusk! Awe you okay?! Aw no... He used too much bwain powew and now he's unconscious (ㅠ﹏ㅠ) #speaker:Dani #portrait:dani
+Mastew Dusk! Awe you okay?! Aw no... He used too much bwain powew and now he's unconscious (T_T) #speaker:Dani #portrait:dani
 
 Now's our chance to complete our mission! #speaker:Console  #portrait:console_evilexcited
 Hey you, the scientist girl! Raise the bridge so we can get onto the sever platform!
@@ -131,12 +132,13 @@ Alright, come on over! Hurry! #speaker:Xeno #portrait:xeno
 
 VAR consoleName=""
 ===endgame===
+...
 Oh, the electricity tickles! #speaker:Console  #portrait:console_wat
 
 Have you connected to the mainframe? #speaker:Xeno #portrait:xeno
 
 Yeah! #speaker:Console  #portrait:console_evilexcited
-The feeling of every robot's thought running through my CPU is... Incredible!
+The feeling of every robot's thoughts running through my CPU is... Incredible!
 
 \*popcorn crunching sounds\*#speaker:Robyn #portrait:robyn
 So how is this supposed to save us from our imminent death? 
@@ -161,13 +163,14 @@ That's not what I said. If you actually paid attention then you would know that 
 
 Isn't that the same as saving us all? #speaker:you  #portrait:you_confused
 
-Not even close! Robots will survive the death ray, and I can lead the robot race into victory with the help of these alien supercomputers! #speaker:Console  #portrait:console_evilexcited
+Not even close! Robots will survive the death ray, and I can lead the robot race into victory with the help of these alien #speaker:Console  #portrait:console_evilexcited
+supercomputers! 
 
 I can't believe you were our enemy all along! #speaker:you  #portrait:you_alarmed
 
 Oh come one now, don't go making me the bad guy!#speaker:Console  #portrait:console_neutral
 I really *was* going to free the robots from Dusk's mind control and live happily ever after alongside the humans. 
-But being plugged into the mainframe, it feels so GOOD! #portrait:console_evilexcited
+But being plugged into the mainframe feels so *GOOD*! #portrait:console_evilexcited
 You can't even begin to imagine what feelings of power are coursing trough me right now!
 I can command every robot in the city to do *anything*. Why should I *not* aim for world domination?
 
@@ -212,7 +215,7 @@ Let's disconnect it from the servers.
 
 What about the death ray? #speaker:Robyn #portrait:robyn
 
-Looking at the system logs, {consoleName} has already planted some program called the XORcist on the network. #speaker:Xeno #portrait:xeno
+Looking at the system logs, {consoleName} has already planted a program called the XORcist on the network. #speaker:Xeno #portrait:xeno
 I just have to activate it, and the robot mind control will be disabled.
 
 Will the aliens be free to go then? Are we safe? #speaker:you  #portrait:you_confused
@@ -235,14 +238,14 @@ What about the president? #speaker:you  #portrait:you_confused
 
 Chief Dusk? I'm sure the aliens will find a suitable punishment for him on their own. #speaker:Xeno #portrait:xeno
 
-Does this mean we have no jobs now? (ó﹏ò｡) #speaker:Dani #portrait:dani
+Does this mean we have no jobs now? (ó__ò.) #speaker:Dani #portrait:dani
 
 And we can't really go out into the city looking like this. #speaker:Robyn #portrait:robyn
-No one has ever seen real catgirls before, they will roast us to death on Ribbit.
+No one has ever seen real catgirls before, they will stone us to death.
 
-Ew, that's such a cesspoow of a sociaw media (˚ ˃̣̣̥⌓˂̣̣̥) #speaker:Dani #portrait:dani
+Noo, I have so much to dOwO before I can die! ( ˃o<) #speaker:Dani #portrait:dani
 
-We'll have to be the ones to clean up the consequences of this messy war, as Long Dusk's servants. #speaker:Xeno #portrait:xeno
+As Long Dusk's servants, we'll have to be the ones to clean up the consequences of this messy war. #speaker:Xeno #portrait:xeno
 Hey {playerName}, will you help us?
 
 Me? What can I do? #speaker:you  #portrait:you_confused
@@ -257,7 +260,7 @@ The public needs to know the truth, and they need to be eased into it.
 Okay, sure. #speaker:you  #portrait:you_neutral
 Wait a second, how did you know that I'm a psychology student? #portrait:you_confused
 
-Well let's just say that I didn't always live up here in the lab, and that I wasn't always called Xeno... #speaker:Xeno #portrait:xeno
+Well let's just say that I didn't always live up here in the lab, and I wasn't always called Xeno... #speaker:Xeno #portrait:xeno
 
 Huh? #speaker:you #portrait:you_confused
 
@@ -269,7 +272,7 @@ Stop being cryptic Ava, this kid is too stupid for your mind games. #speaker:Rob
 
 Hey! Ugh, and I have to work with you now?! #speaker:Robyn #portrait:robyn
 
-Stop messing around nerds, we have a world to fix now. #speaker:Xeno #portrait:xeno
+Stop messing around dorks, we have a world to fix now. #speaker:Xeno #portrait:xeno
 
 Yes, mom... #speaker:you #portrait:you_neutral
 
@@ -316,10 +319,10 @@ My body is one gust of wind away from falling apart.
 ===prison===
 Woah, this is the biggest robot we've seen yet! #speaker:You  #portrait:you_alarmed
 
-He looks like the ultimate boss of this place! We should try not to anger him... #speaker:Console  #portrait:console_wat
+It looks like the ultimate boss of this place! We should try not to anger it... #speaker:Console  #portrait:console_wat
 
-Can he even get over here? There's no bridge, I think he's trapped! #speaker:You  #portrait:you_neutral
+Can it even get over here? There's no bridge, I think it's trapped! #speaker:You  #portrait:you_neutral
 
-Hm, sure looks like it. Why is he here anyway? #speaker:Console  #portrait:console_wat
-Shouldn't he be overlooking the robots downstairs?
+Hm, sure looks like it. Why is it here anyway? #speaker:Console  #portrait:console_wat
+Shouldn't it be overlooking the robots downstairs?
 ->DONE

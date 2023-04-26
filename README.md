@@ -1,1 +1,1 @@
-unity freezes when it tries to enter playmode on the soceng (social engineering) scene 90% of the time. other times it manages to enter playmode successfully. i suspect it's because of the sceneManager object (which communicates with the phising minigame canvas). i haven't been able to debug my word grid because it freezes so much before even entering playmode.
+

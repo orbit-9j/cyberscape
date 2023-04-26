@@ -5,19 +5,19 @@ using UnityEngine;
 public class BattleMinigame : MonoBehaviour
 {
     protected GameManager gameManager; //protected allows inherited classes to see the variable, unlike private
-    protected float timeLeft = 5.0f;
+    protected float timeLeft = 100.0f;
     /*  protected bool isTimerRunning = false; */
-    public bool winState = false;
-    public bool minigameEnded = false;
+    public bool winState;
+    public bool minigameEnded;
     [SerializeField] protected GameObject screenObject;
-    [SerializeField] protected GameObject textPrefab;
+    [SerializeField] protected GameObject textPrefab; //i think i only need it for soceng battle
     [SerializeField] private GameObject minigameUI;
     protected bool acceptInput;
 
     public Timer timer;
 
     [SerializeField] private BattleController panel;
-
+    private bool isCountingDown = false;
     //public Text timerText;
 
     public void Start()
@@ -26,21 +26,31 @@ public class BattleMinigame : MonoBehaviour
         minigameUI.SetActive(true);
         minigameEnded = false;
         acceptInput = true;
+        winState = false;
 
         timer.totalTime = timeLeft;
         timer.timerRunning = true;
         timer.StartTimer();
 
         //StartCoroutine(UpdateTimer());
+        if (!isCountingDown)
+        {
+            StartCoroutine(CheckTime());
+        }
+
     }
 
-    protected virtual void Update()
+    protected IEnumerator CheckTime()
     {
-        if (!timer.timerRunning)
+        isCountingDown = true;
+        while (timer.timerRunning)
         {
-            EndMinigame();
+            yield return null;
         }
+        Debug.Log("timer stopped");
+        EndMinigame();
     }
+
 
     protected int CalculateDamage()
     {
@@ -55,9 +65,10 @@ public class BattleMinigame : MonoBehaviour
 
         if (panel.player.turn)
         {
-            damage = damage + (panel.player.streak * 2); //check streak and determine multiplier
+            damage = damage + (panel.player.streak * 3); //check streak and determine multiplier
         }
 
+        damage += Random.Range(0, 3);
         //also add a random number between like 0 and 3 to make the damage unpredictable. use method from gamemanager
 
         return damage;
@@ -81,13 +92,17 @@ public class BattleMinigame : MonoBehaviour
             panel.streakText.text = "streak: " + panel.player.streak;
         }
 
-        if (CalculateDamage() != 0) //play damage animation if damage has been dealt
+        int damage = CalculateDamage();
+        //panel.opponent.TakeDamage(10); //debug
+        if (damage != 0) //play damage animation if damage has been dealt
         {
-            panel.opponent.TakeDamage(CalculateDamage());
+            panel.opponent.TakeDamage(damage);
+            Debug.Log("enemy damage: " + damage);
         }
 
-        minigameEnded = true;
         minigameUI.SetActive(false);
+        Debug.Log("disabling minigame ui");
+        minigameEnded = true;
         panel.currentCharacter.minigamePlaying = false;
     }
 }

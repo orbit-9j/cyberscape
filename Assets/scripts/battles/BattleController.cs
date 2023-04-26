@@ -42,6 +42,7 @@ public class BattleController : MonoBehaviour
 
     private IEnumerator StartTurn()
     {
+
         if (player.turn)
         {
             player.StartTurn();
@@ -69,54 +70,57 @@ public class BattleController : MonoBehaviour
             currentCharacter = player;
         }
 
-        //add exit condition (while player or enemy alive)
-        StartCoroutine(StartTurn());
+        Debug.Log("end of turn");
+        if (player.remainingHealth > 0 && enemy.remainingHealth > 0)
+        {
+            StartCoroutine(StartTurn());
+        }
+
+        else
+        {
+            Debug.Log("health check running");
+            if (player.remainingHealth > enemy.remainingHealth)
+            {
+                playerWin = true;
+                //win code
+                //delete enemy, next interaction
+            }
+            else
+            {
+                playerWin = false;
+                //loss code
+                //exit and retry enemy
+            }
+
+            EndBattle();
+        }
     }
 
     void Update()
     {
-        //keep track of time - give time bar own script?
-    }
-
-    private void HandleStreak() //where do i call it?
-    {
-        //if time left > 0 and minigame has not been completed, 
-        //damage to enemy: damage + streak*someValue (or (damage + streak) * value?)
-        //damage to player: damage - streak*someValue (or (damage + streak) * value?)
-
-        //if time left > 0 and minigame has been completed, win = true, streak++, ManageWinLoss();
-        //else, win = false, streak = 0, ManageWinLoss();
-    }
-
-    private void HandleTimer(float timeAllowed)
-    {
-        //private float timeLeft; get time left from the minigame script?
-
-        //if  time left <=0 : lose state
-        //else:
-        //update time bar text
-        //update time bar width
-    }
-
-    private void ManageWinLoss()
-    {
-        if (playerWin)
+        /* Debug.Log("update method running");
+        if (player.remainingHealth <= 0 || enemy.remainingHealth <= 0)
         {
-            //win code
-        }
-        else
-        {
-            //lose code
-        }
-    }
+            if (player.remainingHealth > enemy.remainingHealth)
+            {
+                playerWin = true;
+                //win code
+                //delete enemy, next interaction
+            }
+            else
+            {
+                playerWin = false;
+                //loss code
+                //exit and retry enemy
+            }
 
-    /* private void HandleBar(float totalWidth, int oldValue, int valueChange)
-    {
-        //set new bar width proportionate to oldValue-valueChange and the total width of the object
-    } */
+            EndBattle();
+        } */
+    }
 
     private void EndBattle()
     {
         gameManager.playerMoves = true;
+        gameObject.SetActive(false);
     }
 }
