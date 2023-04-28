@@ -58,6 +58,7 @@ public class CipherBattle : BattleMinigame
     void Update() //accepts and processes input
     {//somehow differentiate between which direction to go in and how to register that difference
      // encrypt = key, decrypt = mod(26,key)?
+        base.Update();
         if (acceptInput)
         {
             //take turns changing which alphabet moves
@@ -117,7 +118,6 @@ public class CipherBattle : BattleMinigame
         }
     }
 
-
     private void Encrypt()
     {
         encrypt = true;
@@ -156,15 +156,11 @@ public class CipherBattle : BattleMinigame
         }
         else
         {
+            winState = true; //all rounds are completed before time's up = win
             EndMinigame();
         }
 
     }
-
-    /* private void ResetPlaintext()
-    {
-        plaintextMessage.text = "plaintext:";
-    } */
 
     private void DisplaceAlphabet() // Update the alphabet text with the displaced string
     {
@@ -178,7 +174,6 @@ public class CipherBattle : BattleMinigame
             displacedAlphabet.Add(alphabetArray[index]);
         }
 
-
         if (encrypt)
         {
             ciphertextAlphabet.text = string.Join(" ", displacedAlphabet);
@@ -187,7 +182,6 @@ public class CipherBattle : BattleMinigame
         {
             plaintextAlphabet.text = string.Join(" ", displacedAlphabet);
         }
-
     }
 
     private void Finalise()
