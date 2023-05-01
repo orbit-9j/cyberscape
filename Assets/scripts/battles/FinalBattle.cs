@@ -9,10 +9,10 @@ public class FinalBattle : BattleMinigame
 {
     [SerializeField] private List<TextMeshProUGUI> cells; // word grid cells
     private List<string> terms = new List<string>(){
-        "2 Factor Authentication (2FA)", "malware", "password manager", "software patching", "firewall", "digital footprint"
+        "2 Factor Authentication (2FA)", "malware", "password manager", "software patching", "firewall", "digital footprint", "anti-virus software", "asymmetric cryptography", "audit log", "authentication", "backup", "biometric", "cybersecurity", "Denial Of Service (DoS) attack", "hacker", "internet", "keylogger", "network", "password", "personal data", "privacy", "remote access", "trojan horse"
     };
     private List<string> definitions = new List<string>(){
-        "requiring two forms of authentication to access data", "malicious software made to harm your computer or steal your data", "a program that securely stores your account credentials for different accounts", "a software update that fixes security vulnerabilities and bugs", "software that monitors network traffic and decides if it should be blocked or allowed", "traces of your online activity that can be followed"
+        "requiring two forms of authentication to access data", "malicious software made to harm your computer or steal your data", "a program that securely stores your account credentials for different accounts", "a software update that fixes security vulnerabilities and bugs", "software that monitors network traffic and decides if it should be blocked or allowed", "traces of your online activity that can be followed", "a program that detects potential malware on your computer", "uses an encryption algorithm where the encryption and decryption keys are different", "a record of user activity on a computer system", "verifying the identity of a user trying to access a system", "a copy of data on a computer system kept to restore in case of a system failure", "a body measurement that can be used for personal identification", "the protection of information stored in or processed by computer systems from misuse", "cyber attack that overwhelms a computer system's network connections and makes it inaccessible", "a person who gains access to a computer system with often malicious intent", "a global network of computers that enables the sharing of information across a wide geographical area", "malware that spys on a user's keyboard input and sends it to the attacker", "a collection of computers that communicate with each other through wired or wireless connections", "a sequence of characters used to gain access to a computer system", "information that can personally identify you", "hiding data from unauthorised access", "gaining access to information on a computer system that is not on the same network as you", "malware that poses as other legitimate software"
     };
 
     private List<List<TextMeshProUGUI>> wordGrid = new List<List<TextMeshProUGUI>>();
@@ -37,20 +37,25 @@ public class FinalBattle : BattleMinigame
         for (int i = 0; i < cells.Count; i += numberOfColumns)
         {
             List<TextMeshProUGUI> sublist = cells.GetRange(i, Math.Min(numberOfColumns, cells.Count - i));
-            foreach (TextMeshProUGUI item in sublist)
-            {
-                item.text = "";
-            }
             wordGrid.Add(sublist);
         }
 
-        PopulateGrid();
-        selectedTextbox = wordGrid[row][column];
-        HighlightText();
+        ResetMinigame();
     }
 
     private void PopulateGrid()
     {
+        selectedCells.Clear();
+        correctCells.Clear();
+
+        foreach (List<TextMeshProUGUI> row in wordGrid)
+        {
+            foreach (TextMeshProUGUI cell in row)
+            {
+                cell.text = "";
+            }
+        }
+
         List<string> added = new List<string>();
         int numberOfAddedTerms = 0;
         //populate grid with terms
@@ -84,6 +89,24 @@ public class FinalBattle : BattleMinigame
                 numberOfAddedTerms++;
             }
         }
+
+        //reset colours
+        foreach (List<TextMeshProUGUI> row in wordGrid)
+        {
+            foreach (TextMeshProUGUI cell in row)
+            {
+                cell.color = Color.white;
+            }
+        }
+    }
+
+    public override void ResetMinigame()
+    {
+        round = 0;
+        PopulateGrid();
+
+        selectedTextbox = wordGrid[row][column];
+        HighlightText();
     }
 
     void Update()
@@ -157,30 +180,22 @@ public class FinalBattle : BattleMinigame
 
                     selectedCells.Clear();
 
-                    //game freezes here
                     if (correctCells.Count == numberOfRows * numberOfColumns)
                     {
                         round++;
                         if (round < numberOfRounds)
                         {
-                            foreach (var row in wordGrid)
+                            foreach (List<TextMeshProUGUI> row in wordGrid)
                             {
-                                foreach (var cell in row)
+                                foreach (TextMeshProUGUI cell in row)
                                 {
                                     cell.text = "";
                                 }
                             }
                             //Debug.Log("cell content: " + cells[0].text);
-                            correctCells.Clear();
                             PopulateGrid();
 
-                            foreach (TextMeshProUGUI cell in cells)
-                            {
-                                cell.color = Color.white;
-                            }
-
-                            selectedTextbox = wordGrid[row][column];
-                            HighlightText();
+                            HandleSelection();
                         }
                         else if (round == numberOfRounds)
                         {
@@ -188,7 +203,6 @@ public class FinalBattle : BattleMinigame
                             EndMinigame();
                         }
                     }
-                    //don't forget win condition/what damage you do depending on how many rounds idk
                 }
             }
         }
@@ -203,19 +217,22 @@ public class FinalBattle : BattleMinigame
 
     private void DeselectText()
     {
-        foreach (TextMeshProUGUI cell in cells)
+        foreach (List<TextMeshProUGUI> row in wordGrid)
         {
-            if (selectedCells.Contains(cell))
+            foreach (TextMeshProUGUI cell in row)
             {
-                cell.color = Color.grey;
-            }
-            else if (correctCells.Contains(cell))
-            {
-                cell.color = Color.green;
-            }
-            else
-            {
-                cell.color = Color.white;
+                if (selectedCells.Contains(cell))
+                {
+                    cell.color = Color.grey;
+                }
+                else if (correctCells.Contains(cell))
+                {
+                    cell.color = Color.green;
+                }
+                else
+                {
+                    cell.color = Color.white;
+                }
             }
         }
     }

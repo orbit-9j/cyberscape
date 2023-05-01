@@ -8,6 +8,7 @@ public class FinalSceneManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> triggers;
 
+
     void Start()
     {
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
@@ -23,5 +24,4 @@ public class FinalSceneManager : MonoBehaviour
             };
         }
     }
-
 }

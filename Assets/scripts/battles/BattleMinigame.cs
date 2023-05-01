@@ -6,11 +6,9 @@ public class BattleMinigame : MonoBehaviour
 {
     protected GameManager gameManager; //protected allows inherited classes to see the variable, unlike private
     [SerializeField] protected float timeLeft = 100.0f;
-    /*  protected bool isTimerRunning = false; */
     public bool winState;
     public bool minigameEnded;
     [SerializeField] protected GameObject screenObject;
-    [SerializeField] protected GameObject textPrefab; //i think i only need it for soceng battle
     [SerializeField] protected GameObject minigameUI;
     protected bool acceptInput;
 
@@ -30,6 +28,10 @@ public class BattleMinigame : MonoBehaviour
         timer.totalTime = timeLeft;
         timer.timerRunning = true;
         timer.StartTimer();
+    }
+    public virtual void ResetMinigame() //start is only called once when the script loads so i can't reset values from Start(). the reset method resets all the minigame variables and is called once it finishes so it can start again with fresh variables
+    {
+
     }
 
     protected void Update()
@@ -106,6 +108,7 @@ public class BattleMinigame : MonoBehaviour
         }
 
         minigameEnded = true;
+        ResetMinigame();
         minigameUI.SetActive(false);
         panel.minigamePlaying = false;
     }

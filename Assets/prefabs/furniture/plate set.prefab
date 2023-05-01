@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6858315543773708968}
   - component: {fileID: 7396173002301333435}
+  - component: {fileID: 413887807668168089}
   m_Layer: 0
   m_Name: plate set
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &413887807668168089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8875951014332342168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

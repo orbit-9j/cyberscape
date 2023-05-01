@@ -51,7 +51,12 @@ Hmm, let's explore this floor and see if we can find any leads on where we can g
 
 === soceng ===
 This door is locked with a passcode! #speaker:You  #portrait:you_confused
-Will we have to brute force all the possible passcodes like we did with the encryption key?
+
+Good for Dusk. Access control is an important part of cybersecurity. #speaker:Console  #portrait:console_neutral
+You wouldn't want just anyone to be able to get to your secrets! #portrait:console_evilexcited
+
+Okay, but that's not great for us! #speaker:You #portrait:you_alarmed
+Will we have to brute force all the possible passcodes like we did with the encryption key? #portrait:you_confused
 
 Not so fast! Not every code can be easily brute forced. #speaker:Console  #portrait:console_evilexcited
 Looks like this door has a 4-digit code. 
@@ -205,10 +210,6 @@ And one final note: phishing messages often don't address you by name. They say 
 
 Why, did they not do enough research on me? #speaker:You  #portrait:you_confused
 
-It's not always easy to do research on people. Company databases are hopefully encrypted. #speaker:Console #portrait:console_neutral
-Remember the Caesar cipher? It's something like that, but a lot more complex. 
-It's hard for someone unauthorised to gain access to personal information like your name and other details, so they send a 
-general blanket email to victims instead.
 Actually, that's exactly the point of phishing emails! #portrait:console_evilexcited
 
 What is? #speaker:You  #portrait:you_confused
@@ -223,6 +224,14 @@ Has Dusk outlawed them and I... Missed the memo? *badum tss* #portrait:you_neutr
 ... #speaker:Console #portrait:console_wat
 No, it's because sticky notes with sensitive information can easily fall into the wrong hands!#portrait:console_evilexcited
 It's not secure to write that stuff down - it's much more secure to just memorise your codes!
+
+But aren't I supposed to have a unique password for each account? There's no way I can memorise all of them! #speaker:You  #portrait:you_alarmed
+
+That's why password managers exist! #speaker:Console #portrait:console_evilexcited
+They're computer programs that store your passwords in an encrypted database, so all you need to remember is one secure
+password to access that database.
+You can sync your passwords between different devices so you're never caught off guard!
+(This message is (not) sponsored by Bitwarden)
 Now that I think about it, if we didn't send that phishing email we could probably just go searching for that sticky note that employee #portrait:console_neutral
 lost. 
 It's bound to be here somewhere! #portrait:console_evilexcited
@@ -257,7 +266,7 @@ What?! Uh... #speaker:You  #portrait:you_alarmed
 //delivery
 + [Hi, I'm here to deliver a package]
 -> delivery
-+ [Hi, I'm an new intern and I lost my keycard]
++ [Hi, I'm a new intern and I lost my keycard]
 -> intern
 
 = breakin
@@ -342,6 +351,10 @@ Run! #portrait:console_evilexcited
 (The food is plastic) #speaker:You  #portrait:you_neutral
 ->DONE
 
+===managers===
+(These must be all the manager robots.) #speaker:You  #portrait:you_neutral
+->DONE
+
 ===battle===
 Halt! I have been summoned to take care of intruders! #speaker:Guard Bot  #portrait:Default
 
@@ -357,3 +370,49 @@ Hello. My name is Guard Bot. You have tresspassed our lab. Prepare to die. #spea
 #puzzle:battle
 ->DONE
 
+===battleStart===
+Is this battle gonna be the same?  #speaker:You  #portrait:you_confused
+
+Nope, this bot is programmed differently! #speaker:Console  #portrait:console_neutral
+I say you defend as much as you can for this one and then when it's distracted, give it a good smack and hope for the best. #portrait:console_evilexcited
+
+How can I pull *that* off?! #speaker:You  #portrait:you_alarmed
+How do I defend? 
+
+Geez, you always care about defending most, what a wuss. #speaker:Console #portrait:console_wat
+Looks lke it's going to throw a bunch of new emails from your email inbox at you, hoping you fall for a scam. #portrait:console_neutral
+Cycle through them with the arrow keys and toggle their flags as either phishing or legit using the E key.
+Surely, the frustration of its inability to trick you will cause it to self destruct! #portrait:console_evilexcited
+
+Hang on, what if I can't remember what a phshing email looks like? #speaker:You  #portrait:you_confused
+
+Then I guess I'll have to give you a recap if I want us to ever make it past this guard... #speaker:Console #portrait:console_wat
+(If you're feeling confident though, feel free to skip the explanation using the Q key) #portrait:console_neutral
+The aim of a phishing email is to trick you into giving away your personal information: login credentials, address, full 
+name, banking information, etc.
+An email from a legitimate company will not ask you to enter personal information into any webpages linked in the email. 
+They will most likely tell you to navigate to their website yourself and log in that way.
+Legit emails will also likely to address you by name or username (though not always). Phishing emails don't do so.
+Here are some other things to look out for that are often features of phishing emails: 
+sender address not matching a legit company's address, typos, a sense of urgency, offering jobs you didn't apply for, 
+asking for gift cards as payment for something, little to no context to why a webpage is linked, impersonating a friend or
+family member to ask you for help.
+Also it's important to note that not all fake email addresses can be easy to spot. 
+Hackers employ a number of techniques to create a legitimate-looking email address.
+When in doubt if an email you received is legit or not, go to the company's official website and contact support. 
+It's better to be safe than sorry!
+
+Enough chit chat! Let's get this over with so I can eat the lunch leftovers before the break ends.  #speaker:Guard Bot  #portrait:Default
+
+
+->DONE
+
+===battleEnd===
+Good job on your first battle! You won! #speaker:Console  #portrait:console_evilexcited
+Now let's get into the elevator before any more guard bots arrive.  
+->DONE
+
+===battleLost===
+Uh oh, looks like you didn't defeat the guard bot! #speaker:Console  #portrait:console_wat
+Alright, let's regroup and try fighting it again.
+->DONE

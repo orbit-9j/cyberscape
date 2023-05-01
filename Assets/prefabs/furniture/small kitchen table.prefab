@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086295981627232554}
   - component: {fileID: 1086295981627232555}
+  - component: {fileID: 7609971541687127351}
   m_Layer: 0
   m_Name: kitchen tileset_181
   m_TagString: Untagged
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7609971541687127351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086295981627232557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1086295981635018373
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086295981635018370}
   - component: {fileID: 1086295981635018371}
+  - component: {fileID: 2070994379605242298}
   m_Layer: 0
   m_Name: kitchen tileset_183
   m_TagString: Untagged
@@ -168,6 +182,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2070994379605242298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086295981635018373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1086295982122820788
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086295982122820789}
   - component: {fileID: 1086295982122820786}
+  - component: {fileID: 1423851878664340702}
   m_Layer: 0
   m_Name: kitchen tileset_147 (1)
   m_TagString: Untagged
@@ -252,6 +279,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1423851878664340702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086295982122820788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1086295982175376713
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086295982175376710}
   - component: {fileID: 1086295982175376711}
+  - component: {fileID: 7043887226983148902}
   m_Layer: 0
   m_Name: kitchen tileset_147
   m_TagString: Untagged
@@ -336,6 +376,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7043887226983148902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086295982175376713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1086295982184053164
 GameObject:
   m_ObjectHideFlags: 0

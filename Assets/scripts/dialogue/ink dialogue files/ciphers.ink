@@ -82,7 +82,6 @@ the letter Y with the key of 4, which letter will it become? #speaker:Console  #
     -> ciphers.wrong("B")
 * [C]
     -> ciphers.correct("C")
-    //don't actually have to do the dot notation, it just knows
 
 = wrong(answer)
 {answer}? That's not quite right #portrait:console_sad
@@ -105,12 +104,38 @@ Haha, it doesn't actually mean anything. It just so happened that encrypting the
 what looks like a real word. 
 #puzzle:closePuzzle
 You will likely find lots of other plaintexts and keys that result in curious ciphertexts on your encryption journey. #portrait:console_neutral
-Now let's intercept a message from one of the robots and I will teach you how to break this cipher!  #portrait:console_evilexcited
 
-What?! That sounds illegal! #speaker:You  #portrait:you_alarmed 
-You only NOW you realised what we're doing? And anyway, we need to break the cipher to access the elevator again. #speaker:Console  #portrait:console_evilexcited
+You say that as if I will need to know about encryption outside of this quest. #speaker:You  #portrait:you_confused
 
+Actually, yes you will! When you interact with computers, encryption is all around you. #speaker:Console  #portrait:console_neutral
 
+What, where? #speaker:You  #portrait:you_confused
+
+Most computer communications these days are encrypted. #speaker:Console  #portrait:console_neutral
+For example, when you access the internet your search queries are encrypted so that no one can listen in on what weird
+stuff you're searching for.
+Not just your search queries, but also any personal information you enter on websites through forms.
+Your username and password, your credit card details, your address etc. 
+Encryption keeps you safe from identity theft and hacking.
+
+Wait, you said "most communications" and not "all". How can I know if my internet activity is being encrypted? #speaker:You  #portrait:you_confused
+
+There's one easy tip for that: look out for links that start with "https". #speaker:Console  #portrait:console_neutral
+Those are encrypted, and the "s" in "https" stands for "secure". 
+Some links start with "http". Those websites do not encrypt your activity, so be careful about what you type on there!
+You can also look for a closed padlock icon somewhere on your URL bar. 
+Conversely, an open padlock icon means the website isn't using encryption.
+
+Ah, so now I know why my browser gave me an open padlock warning when I wanted to download free Cavebuild... #speaker:You  #portrait:you_neutral
+
+Then why did you ignore it? Warnings are meant to be followed, it's a measure to keep you safe! #speaker:Console  #portrait:console_wat
+
+I wanted to get Cavebuild for free! #speaker:You  #portrait:you_neutral
+
+People like you are the reason humans aren't a Type II civilisation yet! #speaker:Console  #portrait:console_evilexcited
+Nevermind. #portrait:you_neutral
+Let's go intercept a message from one of the robots and I will teach you how to break this cipher!  #portrait:console_evilexcited
+We need to find the cipher key to access the elevator again. #portrait:console_neutral
 -> DONE
 
 VAR key = 0
@@ -216,17 +241,65 @@ We can now try to encrypt our own message and send it to the door to open it.
 
 === encrypt ===
 
- -> DONE
- 
- === battle ===
- Wait, you are not authorised to be here!  #speaker:Guard Bot  #portrait:Default
- Our state-of-the-art security system will ensure you will never get through this door!
- 
- Uh-oh, guess it's time to put what we learned to the test! #speaker:Console  #portrait:console_evilexcited
- #puzzle:battle
- -> DONE
- 
- 
- 
- 
- -> END
+-> DONE
+
+=== battle ===
+Wait, you are not authorised to be here!  #speaker:Guard Bot  #portrait:Default
+Our state-of-the-art security system will ensure you will never get through this door!
+
+Uh-oh, guess it's time to put what we learned to the test! #speaker:Console  #portrait:console_evilexcited
+#puzzle:battle
+-> DONE
+
+===battleStart===
+Wait, I don't know how to fight this robot! #speaker:You  #portrait:you_alarmed
+
+Well, here's the battle plan: we're gonna send the robot terminal commands that have a high chance of shutting it down,#speaker:Console  #portrait:console_neutral
+ hoping one of them will work.
+Because the robot only communicates with encrypted messages, you'll have to encrypt your commands using the caesar 
+cipher I told you about earlier.
+The guard bot will try to change its ecryption key often so you will have to perform a brute force attack and intecept the message
+containing the new key.
+Remember that key and use it for your next brute force attack!
+
+Okay, I can do that. But how do I encrypt and decrypt? #speaker:You  #portrait:you_confused
+
+Use the arrow keys to shift the plaintext alphabet when decrypting, and the ciphertext alphabet when encrypting. #speaker:Console  #portrait:console_neutral
+After a few rounds of the brute force attack, you're gonna find a command that deals a lot of damage.
+That's your "attack" command.
+Sit back and enjoy those few seconds of accomplishment, but keep in mind that you will have to keep trying commands again until 
+the robot shuts down!
+
+What if I need to defend myself? #speaker:You #portrait:you_confused
+
+If you weaken the robot enough, it won't do a strong attack. #speaker:Console  #portrait:console_neutral
+It will only hurt you when you fail to encrypt fast enough, so you better not slack!
+
+What kind of advice is that?! #speaker:You  #portrait:you_alarmed
+
+Save your defence energy for later, I'm sure it will come in handy eventually. #speaker:Console  #portrait:console_evilexcited
+
+Hey, what are you whispering about over there?! I don't have all day! #speaker:Guard Bot  #portrait:Default
+
+->DONE
+
+===battleEnd===
+Good job on your first battle! You won! #speaker:Console  #portrait:console_evilexcited
+Now let's get into the elevator before any more guard bots arrive.  
+->DONE
+
+===battleLost===
+Uh oh, looks like you didn't defeat the guard bot! #speaker:Console  #portrait:console_wat
+Alright, let's regroup and try fighting it again.
+->DONE
+
+/*
+We'll have to be strategic about it. #speaker:Console  #portrait:console_neutral
+This is a turn-based battle, so you and the robot take turns attacking and defending. 
+You look like a weak little friend so your best bet is to avoid dying before it does.
+Put all your effort into defence!
+
+Alright, so how do I defend? #speaker:You  #portrait:you_confused
+*/
+
+-> END

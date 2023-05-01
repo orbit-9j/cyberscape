@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 //using UnityEngine.UI; //imported to change choices panel colour
 
 //https://www.youtube.com/watch?v=vY0Sk93YUhA 12/02/2023
@@ -43,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
     private const string PUZZLE_TAG = "puzzle"; //tag to indicate puzzle start
+    private const string ENDGAME_TAG = "endgame";
     private Coroutine displayLineCoroutine;
     private const string layoutYou = "right";
     private const string layoutThem = "left";
@@ -198,6 +200,10 @@ public class DialogueManager : MonoBehaviour
                     {
                         currentPuzzle.SetActive(false);
                     }
+                    break;
+
+                case ENDGAME_TAG:
+                    SceneManager.LoadScene(0, LoadSceneMode.Single);
                     break;
                 default:
                     Debug.Log("tag isn't currently being handled: " + tag);

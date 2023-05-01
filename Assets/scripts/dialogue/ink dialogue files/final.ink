@@ -108,12 +108,30 @@ I'm not an ipad. #speaker:Console  #portrait:console_wat
 
 You think you're so smart huh? Well then let me show you the extent of my own intellect! #speaker:Long Dusk #portrait:dusk
 
-//#puzzle:battle
-
-//a minigame where he throws intimidating tech terms at you and you have to empty the screen by matching a term to a definition. you select 2 items and if they're a pair they disappear and if they're not related they flash red. you have to finish the minigame before the time runs out, and it's repeated several rounds with randomised terms
+#puzzle:battle
 
 ->DONE
 
+===battleStart===
+That's it, I'm toast. #speaker:you  #portrait:you_neutral
+
+Did your psychology degree come with the pessimism? #speaker:Console  #portrait:console_evilexcited
+
+Why are you so fixated on this, give me a break! #speaker:you  #portrait:you_alarmed
+
+Alright, here's the battle plan: #speaker:Console  #portrait:console_wat
+Dusk is gonna try to prove his intellect to you by throwing a bunch of smart-sounding words at you. #portrait:console_neutral
+You just gotta match the term to the definition and show him that even an idiot like you can do this! #portrait:console_evilexcited
+
+If you're so certain in your power, then bring it on! #speaker:Long Dusk #portrait:dusk
+
+Wait, what are *they* doing here?! #speaker:you #portrait:you_confused
+
+Watching the show, duh! #speaker:Robyn #portrait:robyn
+
+Good luck! #speaker:Xeno #portrait:xeno
+
+->DONE
 
 ===win===
 Mastew Dusk! Awe you okay?! Aw no... He used too much bwain powew and now he's unconscious (T_T) #speaker:Dani #portrait:dani
@@ -128,6 +146,16 @@ Sure can! #speaker:Console  #portrait:console_evilexcited
 Alright, come on over! Hurry! #speaker:Xeno #portrait:xeno
 
 //bridge opens
+->DONE
+
+===battleLost===
+As I expected, you cannot defeat the great Long Dusk! #speaker:Long Dusk #portrait:dusk
+Now if you excuse me, I've got a war to fight. I'll have one of my servants escort you worms out.
+
+Don't worry! I'm sure he'll get so distracted by being an evil villain that he will magically forget this confrontation ever #speaker:Console #portrait:console_neutral
+happened! 
+Let's try to challenge him again!
+
 ->DONE
 
 VAR consoleName=""
@@ -192,7 +220,8 @@ Delusional as always, I see... #portrait:console_neutral
 Well either way, you're going down! #speaker:Console #portrait:console_evilexcited
 
 No you! #speaker:you  #portrait:you_alarmed
-//puzzle off switch
+
+#puzzle:finalMove
 
 ->DONE
 

@@ -66,17 +66,9 @@ Don't you read the news?! Dusk has fired all cybersecurity teams to free up budg
 Alright, should be easy enough then. Let's finish your quest so I can go back to my game! #speaker:You #portrait:you_neutral
 
 How many times do I have to tell you, it isn't a real game... #speaker:Console #portrait:console_wat
+(Tip: press C to view game controls.) #portrait:console_neutral
 ->DONE
 
-
-===epilogue===
-(Phew, finally home.) #speaker:you #portrait:you_neutral
-(Xeno factory reset my games console so it doesn't remember anything.)
-(The reset has deleted the free Cavebuild game though, so I'll have to install it again.)
-(Last time I tried to crack a game, I ended up going on the most exhausting adventure of my life.)
-(I never want to do this again.)
-(I think I will just buy the official game instead, like I was always supposed to.)
-->DONE
 
 
 //this file is an ink syntax test - the backstory will be revealed in a less direct way later
