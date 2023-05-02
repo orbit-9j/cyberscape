@@ -1,5 +1,3 @@
-//this is a draft that has not yet been fully proofread or fact checked
-
 ===main===
 Phew, we didn't get caught! #speaker:You  #portrait:you_neutral
 
@@ -98,7 +96,7 @@ Well, the best way would be to send an email pretending we are a colleague who f
 Surely no one would fall for that! That's clearly suspicious! #speaker:You  #portrait:you_confused
 
 Yeah, that's what they think! #speaker:Console  #portrait:console_evilexcited
-In reality, most humans fail to recognise social engineering, and that's often how cyber atacks start. #portrait:console_neutral
+In reality, most humans fail to recognise social engineering, and that's often how cyber attacks start. #portrait:console_neutral
 
 Are you \*sure\* you're a psychology student? #portrait:console_wat
 
@@ -109,7 +107,7 @@ What typical cybersecurity training fails to address is that people don't expect
 engineering. 
 They view this training as a hypothetical exercise or just something to tick off on their to-do list, and fail to actively 
 apply what they learned in real life.
-Cybersecurity raining usually takes place in a controlled environment where the employees know to expect a test, so they are 
+Cybersecurity training usually takes place in a controlled environment where the employees know to expect a test, so they are 
 prepared to act in a rehearsed manner.
 Very few people in real life are constantly on guard, and that's why they sometimes dismiss even the most suspicious of emails.
 I bet \*you\* wouldn't think twice before clicking on a "sorry we missed you" email from a delivery company and filling in your #portrait:console_evilexcited
@@ -118,7 +116,7 @@ contact information without checking if you even ordered anything first.
 I wouldn't. I never order anything online, I go dumpster diving instead. #speaker:You  #portrait:you_neutral
 
 That's because you're a lost cause. Most other people would. #speaker:Console #portrait:console_wat
-Anyway, let's find a way to contact an employee, and I will teach you how to take advantage of guillable people! #portrait:console_evilexcited
+Anyway, let's find a way to contact an employee, and I will teach you how to take advantage of gullable people! #portrait:console_evilexcited
 
 -> DONE
 
@@ -138,7 +136,7 @@ Let's listen in on their conversation and see if we learn anything! #portrait:co
 
 ->DONE
 
-===minigame== //second infobot trigger
+===minigame== 
 Now that we've done some research on the company, let's write a phishing email to get the code to the offices wing. #speaker:Console #portrait:console_evilexcited
 
 We're going fishing?! #speaker:You  #portrait:you_confused
@@ -174,7 +172,7 @@ Firstly, I used a lot of words that only the employees working at the company wo
 For example, the names of the employees. 
 I also mentioned parts of this workplace's culture, such as the fact that the managers go to lunch before the other employees,
 or that the employees tend to write down their codes on sticky notes.
-The email's context is something the receprtionist will know, too: one employee often loses his sticky note and has to be reminded 
+The email's context is something the receptionist will know, too: one employee often loses his sticky note and has to be reminded 
 of the code often.
 This way, it will look like the email came from a real employee rather than an intruder.
 
@@ -187,7 +185,7 @@ what to do.
 Is that why you asked to receive the code before lunch break is over? #speaker:You  #portrait:you_confused
 
 Yeah! People tend to panic and make irrational decisions under pressure. #speaker:Console #portrait:console_evilexcited
-But what's a little time pressure without a consequence? If the recepient has no reason to hurry up, they won't bite! #portrait:console_neutral
+But what's a little time pressure without a consequence? If the recipient has no reason to hurry up, they won't bite! #portrait:console_neutral
 
 Is that why you said that the employee will be fired if he doesn't get the code ASAP? #speaker:You  #portrait:you_confused
 What if the receptionist doesn't care about someone else getting fired? 
@@ -217,6 +215,7 @@ What is? #speaker:You  #portrait:you_confused
 To trick you into giving away sensitive information, just like we are tricking the receptionist into giving away the door code! #speaker:Console #portrait:console_evilexcited
 Phishing emails often ask you to go to a fake webpage of a reputable company and fill in your personal details. #portrait:console_neutral
 Phishing scams most commonly ask for your banking credentials to steal your money, so be careful where you enter them! #portrait:console_evilexcited
+Actually, it's good practice to check if the link you're directed to uses https.#portrait:console_neutral
 
 Alright, but back to the topic - what's wrong with writing things on sticky notes anyway? #speaker:You  #portrait:you_confused
 Has Dusk outlawed them and I... Missed the memo? *badum tss* #portrait:you_neutral
@@ -250,7 +249,7 @@ We got the passcode! Let's go to the door and type it in to access the offices! 
 ->DONE 
 
 ===keypad===
-Hurry, lunchtime is almost over!
+Hurry, lunchtime is almost over! #speaker:Console  #portrait:console_wat
 #puzzle:KeypadPanel
 Let's input the passcode in here now, it's {passcode}. #speaker:Console  #portrait:console_evilexcited
 ->DONE
@@ -260,7 +259,7 @@ It would be weird if I talk here since I'm just a games console, so you're on yo
 
 What?! Uh... #speaker:You  #portrait:you_alarmed
 
-...
+...#speaker: #portrait:you_neutral
 + [Hi, I'm trying to break into Dusk's lair]
 -> breakin
 //delivery
@@ -379,16 +378,16 @@ I say you defend as much as you can for this one and then when it's distracted, 
 How can I pull *that* off?! #speaker:You  #portrait:you_alarmed
 How do I defend? 
 
-Geez, you always care about defending most, what a wuss. #speaker:Console #portrait:console_wat
-Looks lke it's going to throw a bunch of new emails from your email inbox at you, hoping you fall for a scam. #portrait:console_neutral
+Wow what a wuss. #speaker:Console #portrait:console_wat
+Looks like it's going to throw a bunch of new emails from your email inbox at you, hoping you fall for a scam. #portrait:console_neutral
 Cycle through them with the arrow keys and toggle their flags as either phishing or legit using the E key.
 Surely, the frustration of its inability to trick you will cause it to self destruct! #portrait:console_evilexcited
 
-Hang on, what if I can't remember what a phshing email looks like? #speaker:You  #portrait:you_confused
+Hang on, what if I can't remember what a phishing email looks like? #speaker:You  #portrait:you_confused
 
 Then I guess I'll have to give you a recap if I want us to ever make it past this guard... #speaker:Console #portrait:console_wat
-(If you're feeling confident though, feel free to skip the explanation using the Q key) #portrait:console_neutral
-The aim of a phishing email is to trick you into giving away your personal information: login credentials, address, full 
+//(If you're feeling confident though, feel free to skip the explanation using the Q key) #portrait:console_neutral
+The aim of a phishing email is to trick you into giving away your personal information: login credentials, address, full #portrait:console_neutral
 name, banking information, etc.
 An email from a legitimate company will not ask you to enter personal information into any webpages linked in the email. 
 They will most likely tell you to navigate to their website yourself and log in that way.
@@ -403,8 +402,6 @@ When in doubt if an email you received is legit or not, go to the company's offi
 It's better to be safe than sorry!
 
 Enough chit chat! Let's get this over with so I can eat the lunch leftovers before the break ends.  #speaker:Guard Bot  #portrait:Default
-
-
 ->DONE
 
 ===battleEnd===

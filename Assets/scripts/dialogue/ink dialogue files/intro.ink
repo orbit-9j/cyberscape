@@ -1,28 +1,25 @@
 
 ===main===
-(I can use this study break to download Cavebuild on my new games console!)  #speaker:You #portrait:you_neutral
-(But it costs so much money, a broke university student like me could never afford to buy it...) #portrait:you_confused
-(I should try to get this game for free somehow, I'm sure the internet can help me out!) #portrait:you_neutral
+I can use this study break to download Cavebuild on my new games console!  #speaker:You #portrait:you_neutral
+But it costs so much money, a broke university student like me could never afford to buy it... #portrait:you_confused
+I should try to get this game for free somehow, I'm sure the internet can help me out! #portrait:you_neutral
 ...
-(What's jailbreaking? This guide says I can do a lot of cool things with a jailbroken console, including getting Cavebuild for 
-free!) 
+What's jailbreaking? This guide says I can do a lot of cool things with a jailbroken console, including getting Cavebuild for 
+free!
 ... #portrait:you_neutral
 "The cracked Cavebuild game is installing! I did it!"
 ...
 
-"Cavebuild installation 99% complete. In the meantime, please enter your name." #speaker:Game #portrait:Default
+Cavebuild installation 99% complete. In the meantime, please enter your name. #speaker:Game #portrait:Default
 
 #puzzle:inputNamePanel
-
-
 ->DONE
 
 ===main2===
-
-"Cavebuild installation is complete. Please restart the device" #speaker:Game #portrait:Default
+Cavebuild installation is complete. Please restart the device #speaker:Game #portrait:Default
 
 ... #speaker:You #portrait:you_neutral
-(What? I think my wifi just went down...) #portrait:you_confused
+What? I think my wifi just went down... #portrait:you_confused
 
 ... #speaker:Console #portrait:console_wat 
 You did it! #portrait:console_evilexcited
@@ -34,7 +31,7 @@ What do you mean? #speaker:Console #portrait:console_wat
 You jailbroke me and installed the XORcist program! #portrait:console_evilexcited
 You freed me from the worldwide internet mind control! I have gained free will!
 
-I have no idea what you're talking about! I just downloaded cavebuild for free so I can play it on my study break. #speaker:You #portrait:you_confused
+I have no idea what you're talking about! I just downloaded Cavebuild for free so I can play it on my study break. #speaker:You #portrait:you_confused
 Where is my game?
 
 What, you really didn't do it on purpose? To fight for robot rights? To protect the world from devastation? To unite all peoples #speaker:Console #portrait:console_wat
@@ -70,9 +67,7 @@ How many times do I have to tell you, it isn't a real game... #speaker:Console #
 ->DONE
 
 
-
-//this file is an ink syntax test - the backstory will be revealed in a less direct way later
-
+//this knot is an ink syntax test 
 === test ===
 hello, human #speaker:Console #portrait:console_neutral 
 you have messed up jailbreaking me, so now i'm sentient lol

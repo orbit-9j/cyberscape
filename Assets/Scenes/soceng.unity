@@ -10204,6 +10204,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3469743685101887367, guid: 4403331e13c308a499b1fa6268542fd5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3469743686672211846, guid: 4403331e13c308a499b1fa6268542fd5, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12835,7 +12839,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 55523046735917649, guid: 4cac6f2aa3fda5f4dbf6e4efd9756f2b, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1542186692832037281, guid: 4cac6f2aa3fda5f4dbf6e4efd9756f2b, type: 3}
       propertyPath: m_RootOrder
@@ -23968,7 +23972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051006a7c90abcd4689be8dd792d83a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneBuildIndex: 3
+  sceneBuildIndex: 4
 --- !u!1 &1182244685
 GameObject:
   m_ObjectHideFlags: 0
@@ -26907,7 +26911,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1154233285, guid: 5f4f32ea578c2094ab9b8046ccee5a40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -34221,11 +34225,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543032834400393408, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.5625
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 2543032834400393408, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.625
+      value: 15.1875
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835052287710, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_IsActive
@@ -34237,23 +34241,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835360555878, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.5625
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835360555878, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.625
+      value: 15.1875
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835371780733, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835628367417, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.5625
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835628367417, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.625
+      value: 15.1875
       objectReference: {fileID: 0}
     - target: {fileID: 2726332112156393920, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_AnchorMax.x
@@ -34273,7 +34277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4235435948467184854, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: timeLeft
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4505246849666618177, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_RootOrder
@@ -34372,7 +34376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd78511d83783644d967375f4b26aae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 10
+  timeLeft: 80
   winState: 0
   minigameEnded: 0
   screenObject: {fileID: 220635496}

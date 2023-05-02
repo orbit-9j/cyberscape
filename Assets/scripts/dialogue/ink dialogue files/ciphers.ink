@@ -20,9 +20,9 @@ What does that mean? #speaker:You #portrait:you_confused
 
 \*sigh\* Looks like it's time to teach you about ciphers. #speaker:Console  #portrait:console_neutral
 Ciphers encode text in a way that makes it impossible for someone to read it without the secret key.
-This makes comunication secure, so you can share your secrets without anyone learning them.
+This makes communication secure, so you can share your secrets without anyone learning them.
 
-Does that mean we will never be able to get to the other floors? I guess that's mission failed, we'll get 'em next time... #speaker:You  #portrait:you_sad
+Does that mean we will never be able to get to the other floors? I guess that's mission failed, we'll get 'em next time... #speaker:You  #portrait:you_neutral
 
 Not so fast! It looks like these robots use a substitution cipher called Caesar cipher for their messages. #speaker:Console  #portrait:console_evilexcited
 
@@ -63,7 +63,7 @@ The encryption key will encode the plaintext into gibberish that no one can unde
 The encoding process is called ENCRYPTION and the resulting encoded text is called CIPHERTEXT.
 Since our key is 4, to encrypt the plaintext we need to replace each plaintext letter with the letter 4 places to the right from it in the 
 alphabet.
-For example, the letter A will be relaced with E, because E is 4 places down the alphabet.
+For example, the letter A will be replaced with E, because E is 4 places down the alphabet.
 
 But the first letter of our plaintext is W!  W - X - Y - Z, that's only 3 hops and the alphabet has ended. How will that  #speaker:You  #portrait:you_confused
 work?
@@ -118,6 +118,11 @@ Not just your search queries, but also any personal information you enter on web
 Your username and password, your credit card details, your address etc. 
 Encryption keeps you safe from identity theft and hacking.
 
+Oh, do they all use Caesar cipher? #speaker:You  #portrait:you_confused
+
+No, they use much more advanced ciphers that are really hard to break. #speaker:Console  #portrait:console_neutral
+The Caesar cipher is very insecure! They're susceptible to brute force and frequency analysis attacks.
+
 Wait, you said "most communications" and not "all". How can I know if my internet activity is being encrypted? #speaker:You  #portrait:you_confused
 
 There's one easy tip for that: look out for links that start with "https". #speaker:Console  #portrait:console_neutral
@@ -133,7 +138,7 @@ Then why did you ignore it? Warnings are meant to be followed, it's a measure to
 I wanted to get Cavebuild for free! #speaker:You  #portrait:you_neutral
 
 People like you are the reason humans aren't a Type II civilisation yet! #speaker:Console  #portrait:console_evilexcited
-Nevermind. #portrait:you_neutral
+Nevermind. #portrait:console_neutral
 Let's go intercept a message from one of the robots and I will teach you how to break this cipher!  #portrait:console_evilexcited
 We need to find the cipher key to access the elevator again. #portrait:console_neutral
 -> DONE
@@ -141,9 +146,6 @@ We need to find the cipher key to access the elevator again. #portrait:console_n
 VAR key = 0
 VAR ciphertext = ""
 === decrypt ===
-//the key is {key}
-//the ciphertext is {ciphertext}//debug
-
 Looks like this robot is talking to the door. #speaker:Console  #portrait:console_neutral
 Let's see if we can send an encrypted message to the door pretending to be the robot asking to open it.
 
@@ -215,7 +217,7 @@ You can use the left and right arrow keys to rotate the wheel. #speaker:Console 
 Each sector on the wheel represents a Caesar cipher key.
 You can perform a brute force attack by trying out each key on the wheel until the message looks like real words.
 That will mean you found the right key. Press enter to check your answers.
-Alright, I'll give it a try. #speaker:You  #portrait:you_happy
+Alright, I'll give it a try. #speaker:You  #portrait:you_neutral
 ->DONE
 
 
@@ -256,9 +258,9 @@ Wait, I don't know how to fight this robot! #speaker:You  #portrait:you_alarmed
 
 Well, here's the battle plan: we're gonna send the robot terminal commands that have a high chance of shutting it down,#speaker:Console  #portrait:console_neutral
  hoping one of them will work.
-Because the robot only communicates with encrypted messages, you'll have to encrypt your commands using the caesar 
+Because the robot only communicates with encrypted messages, you'll have to encrypt your commands using the Caesar 
 cipher I told you about earlier.
-The guard bot will try to change its ecryption key often so you will have to perform a brute force attack and intecept the message
+The guard bot will try to change its encryption key often so you will have to perform a brute force attack and intercept the message
 containing the new key.
 Remember that key and use it for your next brute force attack!
 
@@ -270,21 +272,13 @@ That's your "attack" command.
 Sit back and enjoy those few seconds of accomplishment, but keep in mind that you will have to keep trying commands again until 
 the robot shuts down!
 
-What if I need to defend myself? #speaker:You #portrait:you_confused
-
-If you weaken the robot enough, it won't do a strong attack. #speaker:Console  #portrait:console_neutral
-It will only hurt you when you fail to encrypt fast enough, so you better not slack!
-
-What kind of advice is that?! #speaker:You  #portrait:you_alarmed
-
-Save your defence energy for later, I'm sure it will come in handy eventually. #speaker:Console  #portrait:console_evilexcited
-
 Hey, what are you whispering about over there?! I don't have all day! #speaker:Guard Bot  #portrait:Default
 
 ->DONE
 
 ===battleEnd===
 Good job on your first battle! You won! #speaker:Console  #portrait:console_evilexcited
+I'll encrypt a signal to let us through and send it to the door.
 Now let's get into the elevator before any more guard bots arrive.  
 ->DONE
 

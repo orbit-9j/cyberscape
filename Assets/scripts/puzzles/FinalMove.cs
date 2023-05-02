@@ -35,7 +35,7 @@ public class FinalMove : MonoBehaviour
         PlayerPrefs.Save();
         elevatorButton.GetComponent<BoxCollider2D>().enabled = true;
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-        DialogueManager.GetInstance().JumpToKnot(knotName);
+        DialogueManager.GetInstance().JumpToKnot(knotName, new List<string>() { "playerName", "consoleName" }, new List<string>() { gameManager.playerName, gameManager.consoleName });
         gameObject.SetActive(false);
     }
 }

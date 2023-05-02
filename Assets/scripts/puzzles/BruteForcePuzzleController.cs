@@ -67,15 +67,24 @@ public class BruteForcePuzzleController : MonoBehaviour
                 RotateWheel(currentRotation);
             }
 
-            if (Input.GetKeyDown(KeyCode.Return) && canExit)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                gameManager.FlashText(ciphertext, Color.white, Color.green);
-                completed = true;
-                acceptInput = false;
-                gameManager.playerMoves = true;
-                gameObject.SetActive(false);
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                DialogueManager.GetInstance().JumpToKnot(knotName);
+                if (canExit)
+                {
+                    StartCoroutine(gameManager.FlashText(ciphertext, Color.white, Color.green));
+                    completed = true;
+                    acceptInput = false;
+                    gameManager.playerMoves = true;
+                    gameObject.SetActive(false);
+                    DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    DialogueManager.GetInstance().JumpToKnot(knotName, new List<string>() { "key" }, new List<string>() { correctKey.ToString() });
+                }
+
+                else
+                {
+                    Debug.Log("flashing red");
+                    StartCoroutine(gameManager.FlashText(ciphertext, Color.white, Color.red));
+                }
             }
         }
     }
