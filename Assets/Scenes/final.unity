@@ -1405,12 +1405,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51da817d519655345aa7fb47adff7453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: 402935decbb6a004fb0e01ca00a8919a, type: 3}
+  knotName: theend
   elevatorButton: {fileID: 2133438534}
   button: {fileID: 40007217}
   defaultSprite: {fileID: -1600090994, guid: 8d82c1c53d0249c4ebd0948a8f674e26, type: 3}
   pressedSprite: {fileID: 819785730, guid: 8d82c1c53d0249c4ebd0948a8f674e26, type: 3}
-  inkJSON: {fileID: 4900000, guid: 402935decbb6a004fb0e01ca00a8919a, type: 3}
-  knotName: theend
 --- !u!1 &441342538
 GameObject:
   m_ObjectHideFlags: 0

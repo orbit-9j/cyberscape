@@ -175,14 +175,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0465d2076a41bbe4b8fff2547dd0a322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: 48334bc536b8870478d99c12a5a3e861, type: 3}
+  knotName: bruteForceMinigame
   sceneManager: {fileID: 1563718523}
   wheel: {fileID: 1818810390}
   correctKey: 12
   number: {fileID: 1230765469}
   ciphertext: {fileID: 1676514248}
-  inkJSON: {fileID: 4900000, guid: 48334bc536b8870478d99c12a5a3e861, type: 3}
-  knotName: bruteForceMinigame
-  completed: 0
 --- !u!114 &29618561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5770,7 +5769,6 @@ MonoBehaviour:
   keyText: {fileID: 1036742964}
   plaintextMessage: {fileID: 1635267029}
   ciphertextMessage: {fileID: 1339284412}
-  completed: 0
 --- !u!114 &1590745549
 MonoBehaviour:
   m_ObjectHideFlags: 0

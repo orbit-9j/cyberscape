@@ -84,7 +84,7 @@ public class BattleMinigame : MonoBehaviour
     {
         //handle enemy damage
         int enemyDamage = 5;
-        enemyDamage += Random.Range(0, 3);
+        enemyDamage += (Random.Range(0, 3) + panel.playerStreak);
         panel.TakeDamage(enemyDamage, ref panel.enemyRemainingHealth, panel.enemyHealthBar, panel.enemyHighlight);
 
         //handle player damage

@@ -4,31 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class InputName : MonoBehaviour
+public class InputName : Puzzle
 {
-
-    private GameManager gameManager;
-    public bool completed;
-    private bool acceptInput;
-
     [SerializeField] private Button enterButton;
     [SerializeField] private Sprite defaultSprite;
     [SerializeField] private Sprite pressedSprite;
     [SerializeField] private TextMeshProUGUI inputText;
     [SerializeField] private TextMeshProUGUI placeholderText;
     [SerializeField] private TMP_InputField inputField;
-    [SerializeField] private TextAsset inkJSON;
-    [SerializeField] private string knotName;
 
     public void Start()
     {
-        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+        base.Start();
+
         gameObject.SetActive(true);
-        acceptInput = true;
-        completed = false;
-        gameManager.playerMoves = false;
-        /*  inputField.Select();
-         inputField.ActivateInputField(); */
+
         StartCoroutine(AutoFocusInputField());
     }
     IEnumerator AutoFocusInputField()
@@ -60,11 +50,8 @@ public class InputName : MonoBehaviour
                     gameManager.playerName = "Mortimer";
                 }
                 Debug.Log(gameManager.playerName);
-                acceptInput = false;
-                completed = true;
-                gameManager.playerMoves = true;
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-                DialogueManager.GetInstance().JumpToKnot(knotName);
+                FinishPuzzle();
+                ContinueDialogue();
                 gameObject.SetActive(false);
             }
 

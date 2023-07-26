@@ -9,7 +9,7 @@ public class CipherSceneManager : MonoBehaviour
     public string plaintext = "Hey door, are you free tomorrow after six pm? I was thinking we could hang out, if you know what I mean.";
     public string ciphertext;
 
-    [SerializeField] GameObject puzzle;
+    [SerializeField] private GameObject puzzle;
 
 
     void Start()

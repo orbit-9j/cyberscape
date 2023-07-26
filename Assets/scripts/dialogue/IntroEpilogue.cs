@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IntroEpilogue : intro
+public class IntroEpilogue : SceneStart
 {
     [SerializeField] private TextAsset EpilogueJSON;
 

@@ -10214,7 +10214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636631723912312431, guid: 4403331e13c308a499b1fa6268542fd5, type: 3}
       propertyPath: destroy
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3636631723912312431, guid: 4403331e13c308a499b1fa6268542fd5, type: 3}
       propertyPath: inkJSON
@@ -26495,6 +26495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56330c13a138b9b4fabab9f3d80e4fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inkJSON: {fileID: 0}
+  knotName: 
   door: {fileID: 918121826}
   buttons:
   - {fileID: 1126891576}
@@ -26510,7 +26512,6 @@ MonoBehaviour:
   esc: {fileID: 1130667929}
   pinText: {fileID: 539613707}
   correctPin: 1987
-  completed: 0
 --- !u!114 &1302886555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56652,6 +56653,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1977816288806967685, guid: ed01fc88e9cc16f4084263fc3e5d942d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed01fc88e9cc16f4084263fc3e5d942d, type: 3}
 --- !u!1 &1977816290118940843 stripped
@@ -56671,13 +56676,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc473e161694c04fbf126004202290a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: 8407e8c4df5e0b34a80e30c6b6a1eb21, type: 3}
+  knotName: email
   script: {fileID: 91583786}
   screenObject: {fileID: 560693888}
   textPrefab: {fileID: 4967197644108157429, guid: 3e747cf48787d9849ad600fd1c4d0782, type: 3}
   correctWordsCounterText: {fileID: 659586774}
   incorrectWordsCounterText: {fileID: 86426692}
-  inkJSON: {fileID: 4900000, guid: 8407e8c4df5e0b34a80e30c6b6a1eb21, type: 3}
-  knotName: email
   variableNames: []
   variableValues: []
 --- !u!1001 &1993681972036671430
