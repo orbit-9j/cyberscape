@@ -76,7 +76,7 @@ break, let's listen in on it and see if we learn anything!
 //they said this door leads to the offices! this is our chance to get closer to long dusk, we need to find the code!
 
 === email ====
-this is a test for the explanation of the email in the phishing minigame
+this text box explains the email that pops up on the screen using the keywords the user selected
 ->DONE
 
 === getcode ===
