@@ -48,7 +48,6 @@ public class DialogueManager : MonoBehaviour
     private const string layoutYou = "right";
     private const string layoutThem = "left";
 
-    public bool puzzlePlaying;
     private GameObject currentPuzzle;
 
     public string currentKnotName = "";

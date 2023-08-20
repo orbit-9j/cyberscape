@@ -36,7 +36,7 @@ public class DialogueTrigger : Interactable
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
     }
 
-    protected void EnableNextInteractable()
+    private void EnableNextInteractable()
     {
         if (hasInteracted)
         {

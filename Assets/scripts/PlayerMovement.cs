@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player_movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private GameManager gameManager;
 
     //https://www.youtube.com/watch?v=whzomFgjT50 09/02/2023
-    public float moveSpeed = 7f;
+    [SerializeField] private float moveSpeed = 7f;
 
-    public Rigidbody2D rb;
-    public Animator animator;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
 
-    Vector2 movement;
+    private Vector2 movement;
 
     void Start()
     {
@@ -56,7 +56,7 @@ public class player_movement : MonoBehaviour
     void FixedUpdate()
     {
         //https://www.youtube.com/watch?v=vY0Sk93YUhA 12/02/2023
-        if (DialogueManager.GetInstance().dialogueIsPlaying || DialogueManager.GetInstance().puzzlePlaying || !gameManager.playerMoves)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || !gameManager.playerMoves)
         {
             return;
         }

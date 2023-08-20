@@ -4,12 +4,11 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using TMPro;
 
-public class KeypadController : MonoBehaviour
+public class KeypadController : Puzzle
 {
     /* this script will be used in the phishing scene as the last puzzle. it allows the user to enter the code they got from the phishing
     puzzle to unlock the door to the next scene */
 
-    private GameManager gameManager;
     [SerializeField] private GameObject door;
 
     [SerializeField] private Button[] buttons; // Array of all the keypad buttons
@@ -23,19 +22,16 @@ public class KeypadController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pinText;
     public string correctPin;
 
-    public bool completed = false;
-
     private void Start()
     {
         gameObject.SetActive(true);
-        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
-        gameManager.playerMoves = false;
+
+        base.Start();
 
         //store the default and pressed sprites of all the buttons
         defaultSprites = new Sprite[buttons.Length];
         pressedSprites = new Sprite[buttons.Length];
         pinText.text = "";
-        completed = false;
 
         //assign sprites to each button
         for (int i = 0; i < buttons.Length; i++)
@@ -81,10 +77,12 @@ public class KeypadController : MonoBehaviour
                         if (pinText.text == correctPin)
                         {
                             pinText.color = Color.green;
-                            completed = true;
-                            gameManager.playerMoves = true;
-                            Destroy(door);
+
+                            FinishPuzzle();
+
                             gameObject.SetActive(false);
+
+                            Destroy(door);
                         }
                         else { pinText.color = Color.red; }
                     }

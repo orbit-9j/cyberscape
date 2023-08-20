@@ -15,11 +15,10 @@ after the player unlocks the email, they will receive a response with the door c
 //add a timer
 //launch minigame from trigger on info robot rather than from the puzzle controller
 
-public class PhishingPuzzle : MonoBehaviour
+public class PhishingPuzzle : Puzzle
 {
-    private GameManager gameManager;
     [SerializeField] private PhishingSceneManager script; //reference to the script that sets the stage for the minigame
-    public GameObject screenObject; //screen on which the words will be displayed
+    [SerializeField] private GameObject screenObject; //screen on which the words will be displayed
 
     //grid variables
     private List<List<string>> wordGrid;
@@ -47,21 +46,16 @@ public class PhishingPuzzle : MonoBehaviour
     private List<string> chosenWords = new List<string>(); //list of player's answers to the minigame
     private string email;
 
-    //dialogue explaining the puzzle
-    [SerializeField] private TextAsset inkJSON;
-    [SerializeField] private string knotName;
 
     //dialogue stuff
     public List<string> variableNames;
     public List<string> variableValues;
 
-    private bool acceptInput = true;
-
     public void Start()
     {
         gameObject.SetActive(true);
-        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
-        gameManager.playerMoves = false;
+
+        base.Start();
 
         //initialise counters
         correctWords = script.correctWords;
@@ -274,7 +268,6 @@ public class PhishingPuzzle : MonoBehaviour
         gameManager.playerMoves = true;
 
         //add dialogue explaining the "generated" email
-        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-        DialogueManager.GetInstance().JumpToKnot(knotName, variableNames, variableValues);
+        ContinueDialogueVariables(variableNames, variableValues);
     }
 }

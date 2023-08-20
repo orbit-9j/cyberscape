@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class intro : MonoBehaviour
+public class SceneStart : MonoBehaviour
 {
 
     [SerializeField] protected TextAsset inkJSON;

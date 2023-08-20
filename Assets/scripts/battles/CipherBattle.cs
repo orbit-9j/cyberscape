@@ -16,10 +16,10 @@ public class CipherBattle : BattleMinigame
 
     private string plaintext = "";
     [SerializeField] private TextMeshProUGUI plaintextMessage;
-    string plaintextStr;
+    private string plaintextStr;
     private string ciphertext = "";
     [SerializeField] private TextMeshProUGUI ciphertextMessage;
-    string ciphertextStr;
+    private string ciphertextStr;
     private bool encrypt = false;
     private List<string> commands = new List<string>(){
         "delete System32", "shutdown /s", "rm -rf /"

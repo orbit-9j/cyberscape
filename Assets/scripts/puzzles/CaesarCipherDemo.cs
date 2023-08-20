@@ -20,9 +20,6 @@ public class CaesarCipherDemo : MonoBehaviour
     private string ciphertext = "What kind of sentence?";
     [SerializeField] private TextMeshProUGUI ciphertextMessage;
 
-    public bool completed;
-    private bool acceptInput;
-
     public void Start()
     {
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
