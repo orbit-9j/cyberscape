@@ -840,12 +840,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Black_35
+      name: enter
       rect:
         serializedVersion: 2
         x: 192
         y: 192
-        width: 16
+        width: 42
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -856,48 +856,6 @@ TextureImporter:
       bones: []
       spriteID: 85c5283fc2f97c44f867622fee55643d
       internalID: -984451940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Keyboard Black_36
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53a16ee3a04f2ee4a817dda422aff1e5
-      internalID: -703248428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Keyboard Black_37
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 192
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6d457c71d840364a95ebb5be19ed622
-      internalID: -806551485
       vertices: []
       indices: 
       edges: []
@@ -2058,12 +2016,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Keyboard Black_93
+      name: enter dark
       rect:
         serializedVersion: 2
         x: 192
         y: 96
-        width: 16
+        width: 42
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2074,48 +2032,6 @@ TextureImporter:
       bones: []
       spriteID: 9a9b17ab78d066e4185820ec2e3c17cc
       internalID: 1095315243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Keyboard Black_94
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adb8f7318fc51f64cbf11838c7941ad2
-      internalID: 1233303825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Keyboard Black_95
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad9cf29958a38f44aa883c759619cf50
-      internalID: 853003396
       vertices: []
       indices: 
       edges: []
@@ -2822,7 +2738,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2877,6 +2793,7 @@ TextureImporter:
       Keyboard Black_39: 503708682
       Keyboard Black_36: -703248428
       Keyboard Black_60: 1873104936
+      enter dark: 1095315243
       Keyboard Black_70: 828280311
       Keyboard Black_115: -804910671
       Keyboard Black_29: 1079086730
@@ -2887,7 +2804,6 @@ TextureImporter:
       Keyboard Black_65: 1275148716
       Keyboard Black_123: -578773353
       Keyboard Black_32: -807584402
-      Keyboard Black_35: -984451940
       Keyboard Black_9: -1192240291
       Keyboard Black_124: -1047545822
       Keyboard Black_105: 942086300
@@ -2909,6 +2825,7 @@ TextureImporter:
       Keyboard Black_107: -727265059
       Keyboard Black_10: -1947110219
       Keyboard Black_75: -646398947
+      enter: -984451940
       Keyboard Black_25: -618323246
       Keyboard Black_96: 1964438149
       Keyboard Black_99: -1796089055
@@ -2924,10 +2841,9 @@ TextureImporter:
       Keyboard Black_66: -1049648781
       Keyboard Black_112: 1109055995
       Keyboard Black_110: 189093841
-      Keyboard Black_118: 774269957
       Keyboard Black_33: -1744492986
+      Keyboard Black_118: 774269957
       Keyboard Black_84: 216826654
-      Keyboard Black_93: 1095315243
       Keyboard Black_92: -1113653822
       Keyboard Black_104: 769488714
       Keyboard Black_41: -720052061

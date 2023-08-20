@@ -1751,7 +1751,7 @@ TextureImporter:
         width: 22
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1759,6 +1759,69 @@ TextureImporter:
       bones: []
       spriteID: 05f0fe8510487354a94eb62ee62e2098
       internalID: 1373958133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wc sign
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1276
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46df87a3d2321e40a050d079f57d162
+      internalID: -1809151584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desk
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 784
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fd819509b30fc4abc7c4239af1df67
+      internalID: 289611735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: open elevator
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 906
+        width: 38
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ee99ac04109464aa66b274911b5a7d
+      internalID: -240809519
       vertices: []
       indices: 
       edges: []
@@ -1789,6 +1852,7 @@ TextureImporter:
       Interiors_free_16x16_42: 2108513750
       Interiors_free_16x16_52: 413965576
       Interiors_free_16x16_49: 1462427008
+      desk: 289611735
       tv picture: 1445907171
       Interiors_free_16x16_6: -815344064
       Interiors_free_16x16_8: -1875918524
@@ -1814,6 +1878,7 @@ TextureImporter:
       Interiors_free_16x16_17: 859848721
       corner counter: 42040906
       rug: -1143758620
+      wc sign: -1809151584
       Interiors_free_16x16_15: 1921032940
       Interiors_free_16x16_58: -749384820
       Interiors_free_16x16_26: -132778410
@@ -1843,6 +1908,7 @@ TextureImporter:
       Interiors_free_16x16_3: -504541631
       Interiors_free_16x16_2: -252735511
       Interiors_free_16x16_56: 745040064
+      open elevator: -240809519
       Interiors_free_16x16_48: -1942662078
       Interiors_free_16x16_36: -579849509
       Interiors_free_16x16_25: -1993034889
