@@ -88,6 +88,7 @@ public class FinalBattle : BattleMinigame
 
     void Update()
     {
+        base.Update();
         //same grid navigation as phishing puzzle
         if (acceptInput)
         {

@@ -294,6 +294,10 @@ public class DialogueManager : MonoBehaviour
                 {
                     currentPuzzle = puzzle;
                     puzzle.SetActive(true);
+                    if (tagValue == "battle")
+                    {
+                        puzzle.GetComponent<BattleManager>().Start(); //resets battle panel in case the player loses the battle and has to do it again
+                    }
                 }
             }
         }

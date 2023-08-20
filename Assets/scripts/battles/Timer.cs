@@ -15,10 +15,10 @@ public class Timer : HealthBar
         remainingTime = totalTime;
         SetTotalTime(totalTime);
         SetTime(remainingTime);
-        //CountDown();
 
         if (!isCountingDown)
         {
+            isCountingDown = true;
             StartCoroutine(CountDown());
         }
     }
@@ -50,17 +50,15 @@ public class Timer : HealthBar
 
     private IEnumerator CountDown()
     {
-        isCountingDown = true;
         while (remainingTime > 0 && timerRunning)
         {
             yield return new WaitForSeconds(1.0f);
             remainingTime -= 1.0f;
             SetTime(remainingTime);
         }
-        remainingTime = 0;
+        remainingTime = 0.0f;
         timerRunning = false;
         isCountingDown = false;
-
     }
     //-----
 }

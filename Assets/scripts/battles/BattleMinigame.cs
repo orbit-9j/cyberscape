@@ -5,20 +5,19 @@ using UnityEngine;
 public class BattleMinigame : MonoBehaviour
 {
     protected GameManager gameManager; //protected allows inherited classes to see the variable, unlike private
-    protected float timeLeft = 100.0f;
+    [SerializeField] protected float timeLeft = 100.0f;
     /*  protected bool isTimerRunning = false; */
     public bool winState;
     public bool minigameEnded;
     [SerializeField] protected GameObject screenObject;
     [SerializeField] protected GameObject textPrefab; //i think i only need it for soceng battle
-    [SerializeField] private GameObject minigameUI;
+    [SerializeField] protected GameObject minigameUI;
     protected bool acceptInput;
 
     public Timer timer;
 
-    [SerializeField] private BattleController panel;
-    private bool isCountingDown = false;
-    //public Text timerText;
+    [SerializeField] private BattleManager panel;
+
 
     public void Start()
     {
@@ -31,47 +30,65 @@ public class BattleMinigame : MonoBehaviour
         timer.totalTime = timeLeft;
         timer.timerRunning = true;
         timer.StartTimer();
-
-        //StartCoroutine(UpdateTimer());
-        if (!isCountingDown)
-        {
-            StartCoroutine(CheckTime());
-        }
-
     }
 
-    protected IEnumerator CheckTime()
+    protected void Update()
     {
-        isCountingDown = true;
-        while (timer.timerRunning)
+        if (!timer.timerRunning)
         {
-            yield return null;
+            winState = false;
+            EndMinigame();
         }
-        Debug.Log("timer stopped");
-        EndMinigame();
     }
 
-
-    protected int CalculateDamage()
+    protected void dealDamageDefence()
     {
-        int damage = 0;
+        //handle streak
+        if (winState)
+        {
+            panel.playerStreak++;
+        }
+        else
+        {
+            panel.playerStreak = 0;
+        }
+        panel.streakText.text = "streak: " + panel.playerStreak;
 
-        //check if timer ran out
-
+        //handle enemy damage
+        int enemyDamage = 0;
         if (winState) //if won, deal damage, otherwise damage is 0
         {
-            damage += 10;
+            enemyDamage += 5;
+            if (timer.remainingTime != 0)
+            {
+                enemyDamage += Mathf.RoundToInt((timer.remainingTime / timer.totalTime) * 15); //time-proportionate damage
+            }
         }
+        enemyDamage = enemyDamage + (panel.playerStreak * 2); //add more damage with a higher streak
+        enemyDamage += Random.Range(0, 3);
+        panel.TakeDamage(enemyDamage, ref panel.enemyRemainingHealth, panel.enemyHealthBar, panel.enemyHighlight);
 
-        if (panel.player.turn)
+        //handle player damage
+        int playerDamage = 0;
+        if (!winState) //if the player lost, maximise damage
         {
-            damage = damage + (panel.player.streak * 3); //check streak and determine multiplier
+            playerDamage += 15;
         }
+        playerDamage += Random.Range(0, 3);
+        panel.TakeDamage(playerDamage, ref panel.playerRemainingHealth, panel.playerHealthBar, panel.playerHighlight);
+    }
 
-        damage += Random.Range(0, 3);
-        //also add a random number between like 0 and 3 to make the damage unpredictable. use method from gamemanager
+    protected void dealDamageAttack()
+    {
+        //handle enemy damage
+        int enemyDamage = 5;
+        enemyDamage += Random.Range(0, 3);
+        panel.TakeDamage(enemyDamage, ref panel.enemyRemainingHealth, panel.enemyHealthBar, panel.enemyHighlight);
 
-        return damage;
+        //handle player damage
+        int playerDamage = 1;
+        playerDamage += Random.Range(0, 2);
+        panel.TakeDamage(playerDamage, ref panel.playerRemainingHealth, panel.playerHealthBar, panel.playerHighlight);
     }
 
     protected void EndMinigame()
@@ -79,30 +96,17 @@ public class BattleMinigame : MonoBehaviour
         acceptInput = false;
         timer.timerRunning = false;
 
-        if (panel.player.turn) //update player streak
+        if (panel.defence)
         {
-            if (winState)
-            {
-                panel.player.streak++;
-            }
-            else
-            {
-                panel.player.streak = 0;
-            }
-            panel.streakText.text = "streak: " + panel.player.streak;
+            dealDamageDefence();
+        }
+        else
+        {
+            dealDamageAttack();
         }
 
-        int damage = CalculateDamage();
-        //panel.opponent.TakeDamage(10); //debug
-        if (damage != 0) //play damage animation if damage has been dealt
-        {
-            panel.opponent.TakeDamage(damage);
-            Debug.Log("enemy damage: " + damage);
-        }
-
-        minigameUI.SetActive(false);
-        Debug.Log("disabling minigame ui");
         minigameEnded = true;
-        panel.currentCharacter.minigamePlaying = false;
+        minigameUI.SetActive(false);
+        panel.minigamePlaying = false;
     }
 }

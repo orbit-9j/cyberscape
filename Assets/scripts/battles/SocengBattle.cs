@@ -111,6 +111,7 @@ public class SocengBattle : BattleMinigame
         {
             DeleteAllText();
             //MarkAnswers();
+            winState = false;
             EndMinigame();//may need to put end minigame into a coroutine like how i have StartCoroutine(AfterFlashing()) in the soceng puzzle
         }
 

@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 5771444101161843196}
   - component: {fileID: 6675511552772709302}
   - component: {fileID: 4799418256401975968}
-  - component: {fileID: 3341047848953955903}
-  - component: {fileID: 2008920217008873389}
   m_Layer: 5
   m_Name: player sprite
   m_TagString: Untagged
@@ -78,48 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3341047848953955903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5743668735127907739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ae8201f187bf55448ebabda8e68b6c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winState: 0
-  minigameEnded: 0
-  screenObject: {fileID: 0}
-  textPrefab: {fileID: 4967197644108157429, guid: 3e747cf48787d9849ad600fd1c4d0782, type: 3}
-  minigameUI: {fileID: 0}
-  timer: {fileID: 0}
-  panel: {fileID: 0}
---- !u!114 &2008920217008873389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5743668735127907739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a17c879c1fc71ae428bbe9cad2c4ccb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalHealth: 80
-  remainingHealth: 80
-  highlight: {fileID: 3998374016708510211}
-  turn: 0
-  topic: 
-  minigame: {fileID: 0}
-  panel: {fileID: 0}
-  characterName: 
-  minigamePlaying: 0
-  healthBar: {fileID: 0}
-  streak: 0
 --- !u!1 &6542861663007710897
 GameObject:
   m_ObjectHideFlags: 0
