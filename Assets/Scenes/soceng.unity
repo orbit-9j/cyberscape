@@ -819,10 +819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d78e7c9aa86ce34dad6e63c69e0335c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlenpcs: {fileID: 496302160}
-  playerchar: {fileID: 1117768385}
-  speed: 10
-  increasespeed: 0
 --- !u!1001 &98576910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6843,6 +6839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157727570}
   - component: {fileID: 157727569}
+  - component: {fileID: 157727571}
   m_Layer: 0
   m_Name: sink
   m_TagString: Untagged
@@ -6917,6 +6914,18 @@ Transform:
   m_Father: {fileID: 1182244686}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157727571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157727566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &173354469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23003,11 +23012,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1117768385 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2543032835360555876, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
-  m_PrefabInstance: {fileID: 1967894656}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1120522849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27100,6 +27104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1398739089}
   - component: {fileID: 1398739090}
+  - component: {fileID: 1398739091}
   m_Layer: 0
   m_Name: cushions
   m_TagString: Untagged
@@ -27174,6 +27179,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1398739091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398739088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1400329826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34250,7 +34267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835371780733, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835628367417, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55576,7 +55593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719970419031116661, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5242567
+      value: -3.5242565
       objectReference: {fileID: 0}
     - target: {fileID: 719970419031116661, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
       propertyPath: m_LocalPosition.z

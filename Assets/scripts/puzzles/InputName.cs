@@ -12,6 +12,7 @@ public class InputName : Puzzle
     [SerializeField] private TextMeshProUGUI inputText;
     [SerializeField] private TextMeshProUGUI placeholderText;
     [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private TextMeshProUGUI errorMsg;
 
     public void Start()
     {
@@ -39,23 +40,33 @@ public class InputName : Puzzle
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                Debug.Log("button pressed");
+                //Debug.Log("button pressed");
                 gameManager.PressUnpressButton(enterButton, defaultSprite, pressedSprite);
-                if (inputField.text != "")
+
+                if (inputField.text.Length > 12)
                 {
-                    gameManager.playerName = inputField.text;
+                    errorMsg.gameObject.SetActive(true);
+                    Debug.Log("error");
+                    StartCoroutine(AutoFocusInputField());
                 }
                 else
                 {
-                    gameManager.playerName = "Mortimer";
+                    if (inputField.text != "")
+                    {
+                        gameManager.playerName = inputField.text;
+                    }
+                    else
+                    {
+                        gameManager.playerName = "Mortimer";
+                    }
+
+                    Debug.Log(gameManager.playerName);
+                    FinishPuzzle();
+                    ContinueDialogue();
+                    gameObject.SetActive(false);
                 }
-                Debug.Log(gameManager.playerName);
-                FinishPuzzle();
-                ContinueDialogue();
-                gameObject.SetActive(false);
+                Debug.Log("input loop completed");
             }
-
-
         }
     }
 }
