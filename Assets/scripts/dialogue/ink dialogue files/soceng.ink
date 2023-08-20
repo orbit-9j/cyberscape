@@ -354,6 +354,6 @@ We have not had the need to hire people to bring us coffee for 10 years.
 Hey, let's just talk this out! Bot-to-bot! #speaker:Console  #portrait:console_neutral
 
 Hello. My name is Guard Bot. You have tresspassed our lab. Prepare to die. #speaker:Guard Bot  #portrait:Default
-//#puzzle:battle
+#puzzle:battle
 ->DONE
 

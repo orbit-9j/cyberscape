@@ -48,7 +48,7 @@ public class Timer : HealthBar
         //Debug.Log(sliderText + ": " + time.ToString("0") + "/" + slider.maxValue);
     }
 
-    private IEnumerator CountDown() //timer is counting down too fast even with delta time
+    private IEnumerator CountDown()
     {
         isCountingDown = true;
         while (remainingTime > 0 && timerRunning)
@@ -62,21 +62,5 @@ public class Timer : HealthBar
         isCountingDown = false;
 
     }
-    /* 
-        private void CountDown() //timer is counting down too fast even with delta time
-        {
-            remainingTime -= 1 * Time.deltaTime;
-            SetTime(remainingTime);
-
-            if (remainingTime < 0 || timerRunning == false)
-            {
-                remainingTime = 0;
-                timerRunning = false;
-            }
-            else
-            {
-                CountDown();
-            }
-} */
     //-----
 }

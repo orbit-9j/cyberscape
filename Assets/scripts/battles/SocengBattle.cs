@@ -29,8 +29,8 @@ public class SocengBattle : BattleMinigame
     [SerializeField] private Button answerButton;
     [SerializeField] private GameObject counterText;
 
-    Color32 legitColour = new Color32(180, 120, 0, 255); //yellow-orange
-    Color32 phishingColour = new Color32(113, 89, 133, 255); //ashy purple
+    private Color32 legitColour = new Color32(180, 120, 0, 255); //yellow-orange
+    private Color32 phishingColour = new Color32(113, 89, 133, 255); //ashy purple
 
     //text to display score (how many emails you got right)
     //ideally i'd need to show which ones were wrong and right
@@ -45,10 +45,12 @@ public class SocengBattle : BattleMinigame
 
         totalEmailsToShow = 3;
 
+        //dear {you} (from game manager)
         legitEmails.Add("from: sharkhubbot@sharkhub.com \nto:{name}@gmail.com \nDear {name}, \nWe have noticed that your SharkHub account has been accessed from a new location. If this wasn't you, please ensure you are logged in and click the link below to manage your devices: sharkhub.com/profile/mydevices. \nKeep Swimming! \nSharkHub security bot");
         legitEmails.Add("legit email uwu");
         legitEmails.Add("legit email2 electric boogaloo");
 
+        //suppot teem
         phishingEmails.Add("test1");
         phishingEmails.Add("test2");
         phishingEmails.Add("test69");
@@ -108,7 +110,7 @@ public class SocengBattle : BattleMinigame
         if (!timer.timerRunning)
         {
             DeleteAllText();
-            MarkAnswers();
+            //MarkAnswers();
             EndMinigame();//may need to put end minigame into a coroutine like how i have StartCoroutine(AfterFlashing()) in the soceng puzzle
         }
 
@@ -150,7 +152,7 @@ public class SocengBattle : BattleMinigame
                 }
 
                 DeleteAllText();
-                MarkAnswers(); //may need to put end minigame into a coroutine like how i have StartCoroutine(AfterFlashing()) in the soceng puzzle
+                //MarkAnswers(); //may need to put end minigame into a coroutine like how i have StartCoroutine(AfterFlashing()) in the soceng puzzle
                 EndMinigame();
             }
         }
@@ -189,7 +191,7 @@ public class SocengBattle : BattleMinigame
 
     private void MarkAnswers() //why is it not working?
     {
-        Debug.Log("marking answers");
+        //Debug.Log("marking answers");
         for (int i = 0; i < totalEmailsToShow; i++)
         {
             currentEmail = mixedEmails[i];

@@ -36,7 +36,6 @@ public class CaesarCipherDemo : MonoBehaviour
 
     void Update()
     {
-        //do i even need negative keys? i should just wrap them since irl -1 would be 25. todo
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             displacement--;
