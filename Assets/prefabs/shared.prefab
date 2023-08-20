@@ -750,6 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2543032833962604641}
   - component: {fileID: 2543032833962604640}
+  - component: {fileID: 2184396882208705544}
   m_Layer: 0
   m_Name: dialogue manager
   m_TagString: Untagged
@@ -796,6 +797,26 @@ MonoBehaviour:
   - {fileID: 2543032835314963014}
   puzzlePlaying: 0
   currentKnotName: 
+--- !u!95 &2184396882208705544
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2543032833962604654}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1ce0dc3b3aca2b4d99344e0585d4ab6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2543032834074581101
 GameObject:
   m_ObjectHideFlags: 0

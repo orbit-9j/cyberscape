@@ -6,7 +6,7 @@ public class IntroEpilogue : intro
 {
     [SerializeField] private TextAsset EpilogueJSON;
 
-    protected override void Start() //not updating, needs some sort of reset method
+    protected override void Start()
     {
         bool epilogue = PlayerPrefs.GetInt("endGame", 0) == 1;
         if (epilogue)
