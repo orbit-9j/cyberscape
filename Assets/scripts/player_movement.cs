@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class player_movement : MonoBehaviour
 {
+    private GameManager gameManager;
+
     //https://www.youtube.com/watch?v=whzomFgjT50 09/02/2023
     public float moveSpeed = 7f;
 
@@ -11,6 +13,11 @@ public class player_movement : MonoBehaviour
     public Animator animator;
 
     Vector2 movement;
+
+    void Start()
+    {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+    }
 
     void Update()
     {
@@ -49,7 +56,7 @@ public class player_movement : MonoBehaviour
     void FixedUpdate()
     {
         //https://www.youtube.com/watch?v=vY0Sk93YUhA 12/02/2023
-        if (DialogueManager.GetInstance().dialogueIsPlaying || DialogueManager.GetInstance().puzzlePlaying)
+        if (DialogueManager.GetInstance().dialogueIsPlaying || DialogueManager.GetInstance().puzzlePlaying || !gameManager.playerMoves)
         {
             return;
         }

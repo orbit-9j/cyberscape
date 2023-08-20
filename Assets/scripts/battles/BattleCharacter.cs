@@ -15,6 +15,14 @@ public class BattleCharacter : MonoBehaviour
     public bool turn; //keeps track of whether it's the gameObject's turn
     public string topic; //ciphers, social engineering, or physical security. decides which type of minigame the battle will have
 
+    public BattleMinigame minigame;
+    public GameObject panel;
+
+    public string characterName;
+    public bool minigamePlaying;
+
+    public HealthBar healthBar; //https://www.youtube.com/watch?v=BLfNP4Sc_iA  06/04/2023
+
 
     /* general idea: a list of minigames, one for each topic. the minigame to be played will be selected depending on the battle topic. each 
     minigame class has attack and defend methods, called by the player. the minigames will inherit from the Minigame class, which will define
@@ -26,6 +34,10 @@ public class BattleCharacter : MonoBehaviour
 
     public virtual void Start()
     {
+        BattleController battleController = panel.GetComponent<BattleController>();
+
+        healthBar.SetMaxHealth(totalHealth); //https://www.youtube.com/watch?v=BLfNP4Sc_iA  06/04/2023
+
         highlight.color = Color.yellow;
         highlight.enabled = false;
 
@@ -38,16 +50,24 @@ public class BattleCharacter : MonoBehaviour
         } */
     }
 
-    /*  void Update()
-     {
+    void Update()
+    {
+        if (minigamePlaying)
+        {
+            if (minigame.minigameEnded)
+            {
+                EndTurn();
+            }
+        }
 
-     } */
+    }
 
     public virtual void TakeDamage(int damage)
     {
         remainingHealth -= damage;
         StartCoroutine(FlashHighlight(Color.red)); //flashes red for visual feedback of a character's state
         //update health bar
+        healthBar.SetHealth(remainingHealth); //https://www.youtube.com/watch?v=BLfNP4Sc_iA  06/04/2023
     }
 
     private IEnumerator FlashHighlight(Color colour) //taking damage animation
@@ -71,6 +91,8 @@ public class BattleCharacter : MonoBehaviour
     {
         highlight.enabled = true; //highlights the character whose turn it is
         turn = true;
+        //battleController.StartCoroutine(WaitForMinigameToComplete(minigame));
+        minigame.Start();
     }
 
     public virtual void EndTurn()

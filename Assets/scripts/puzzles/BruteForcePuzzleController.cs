@@ -10,6 +10,7 @@ public class BruteForcePuzzleController : MonoBehaviour
     /* this is the puzzle tat demonstrates a brute force attack against a caesar cipher. the player needs to rotate a wheel with 26 segments, 
     representing the 26 letters of the english alphabet, to find the correct key (offset) to decode the message */
 
+    private GameManager gameManager;
     public RectTransform wheel; // Reference to the wheel Image component - it is a placeholder that will need to be replaced
     private int segmentNumber = 26;
     [SerializeField] private int correctKey = 12; //will need to be randomly selected in the future
@@ -30,6 +31,7 @@ public class BruteForcePuzzleController : MonoBehaviour
 
     public void Start()
     {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
         acceptInput = true;
         gameObject.SetActive(true);
         completed = false;
@@ -41,6 +43,11 @@ public class BruteForcePuzzleController : MonoBehaviour
     }
 
     private void Update()
+    {
+        GetInput();
+    }
+
+    public void GetInput()
     {
         if (acceptInput) //rotates the wheel 
         {
@@ -63,7 +70,7 @@ public class BruteForcePuzzleController : MonoBehaviour
 
         //wrapping the number around the wheel logic:
         currentSegment = (currentRotation / segmentAngle) + 1;
-        currentSegment = mod((currentSegment - 1 + segmentNumber), segmentNumber) + 1;
+        currentSegment = gameManager.mod((currentSegment - 1 + segmentNumber), segmentNumber) + 1;
 
         number.text = "key: " + Mathf.RoundToInt(currentSegment).ToString(); //update key text
 
@@ -123,17 +130,7 @@ public class BruteForcePuzzleController : MonoBehaviour
     //--------------------------------------------
 
 
-    //c# modulo (%) doesn't work like the modulo i'm used to so i had to find code that does it properly
-    //https://stackoverflow.com/questions/1082917/mod-of-negative-number-is-melting-my-brain 17/02/2023
-    /* int mod(int x, int m)
-    {
-        return (x % m + m) % m;
-    } */
 
-    float mod(float x, float m)
-    {
-        return (x % m + m) % m;
-    }
 }
 
 

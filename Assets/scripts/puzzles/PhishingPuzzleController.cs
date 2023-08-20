@@ -22,6 +22,8 @@ public class PhishingPuzzleController : MonoBehaviour
 
     /* would this actually work better as classes? cuz then i can have a class per puzzle piece, like clue file, correct words list, and email*/
 
+    private GameManager gameManager;
+
     //clue file things
     [SerializeField] private Collider2D[] triggers; //contains the trigger colliders of the interactable robots relating to the puzzle
     [SerializeField] private TextAsset[] inkJSONList; //contains the files that the robots pull clues from. each file is a set of related clues
@@ -43,6 +45,8 @@ public class PhishingPuzzleController : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+
         //why is it only selecting the first file all the time?? - i think it's the inspector panel text field glitch, may need to set it manually for the time being
         int clueFileNum = Random.Range(0, inkJSONList.Length); //randomly select clue file from list of files
 
@@ -81,17 +85,7 @@ public class PhishingPuzzleController : MonoBehaviour
         int maxWordsFromIncorrectWords = wordGridColumns * wordGridRows - tempCorrectWords.Count;
         if (maxWordsFromIncorrectWords < incorrectWords.Count)
         {
-            //Fisher-Yates shuffle to randomise the words in the incorrect word array, before taking the first n words for the puzzle
-            int n = incorrectWords.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = Random.Range(0, n + 1);
-                string value = incorrectWords[k];
-                incorrectWords[k] = incorrectWords[n];
-                incorrectWords[n] = value;
-            }
-            tempIncorrectWords = incorrectWords.GetRange(0, maxWordsFromIncorrectWords);
+            tempIncorrectWords = gameManager.ListShuffle(incorrectWords).GetRange(0, maxWordsFromIncorrectWords);
         }
         else
         {

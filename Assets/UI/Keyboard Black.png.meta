@@ -2717,7 +2717,7 @@ TextureImporter:
         width: 80
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2738,7 +2738,7 @@ TextureImporter:
         width: 64
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2746,6 +2746,90 @@ TextureImporter:
       bones: []
       spriteID: 612ab0e37d5255345bd8930441623a80
       internalID: -1013400812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 225
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0bf48db2bde8e45a6362652f23adfb
+      internalID: 666057142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 225
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2888058485f852846960e7e7e820638d
+      internalID: -269894830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 225
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b30090649151a46a4c4780922d3663
+      internalID: -448684676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 225
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d6bb57486788b4e833f6941eb8b2cd
+      internalID: -2135080537
       vertices: []
       indices: 
       edges: []
@@ -2769,6 +2853,7 @@ TextureImporter:
       Keyboard Black_81: -2076525601
       Keyboard Black_56: 1024749884
       Keyboard Black_103: -1899115455
+      0: 666057142
       Keyboard Black_43: 105641777
       Keyboard Black_80: 2022894033
       Keyboard Black_52: -1411832557
@@ -2830,6 +2915,7 @@ TextureImporter:
       Keyboard Black_83: 2055678506
       Keyboard Black_27: 1114018098
       Keyboard Black_74: 1802296383
+      3: -2135080537
       Keyboard Black_44: -350338880
       Keyboard Black_7: 292291876
       Keyboard Black_47: -1770662588
@@ -2864,6 +2950,7 @@ TextureImporter:
       Keyboard Black_116: 13860094
       Keyboard Black_37: -806551485
       Keyboard Black_106: -1690197399
+      2: -448684676
       Keyboard Black_113: 1844818978
       Keyboard Black_61: -864217010
       Keyboard Black_17: 1425818347
@@ -2879,6 +2966,7 @@ TextureImporter:
       Keyboard Black_62: -1269097775
       Keyboard Black_19: 744417001
       Keyboard Black_4: 1653285729
+      1: -269894830
       Keyboard Black_72: -338502584
       Keyboard Black_89: -1415060750
       Keyboard Black_108: -94572900

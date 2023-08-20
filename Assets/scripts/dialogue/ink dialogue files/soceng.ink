@@ -94,8 +94,21 @@ Hey look, we got the password! Let's go to the door and type it in to access the
 
 ->DONE
 
--> END
 
+===nitrozest===
+(The fizzy green liquid smells citrusy)#speaker:You #layout:layout_you #portrait:you_neutral
+->DONE
 
+===pool===
+(There's something slimy and vaguely humanoid bubbling at the bottom of the pool.)#speaker:You #layout:layout_you #portrait:you_neutral
+->DONE
+
+===painting===
+(You're not sure if this is a window or a painting) #speaker:You #layout:layout_you #portrait:you_confused
+->DONE
+
+===food===
+(The food is plastic) #speaker:You #layout:layout_you #portrait:you_neutral
+->DONE
 
 
