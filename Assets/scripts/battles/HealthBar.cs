@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// ignore this line i'm trying to figure out why git doesn't push files that were added since initial commit
+
 public class HealthBar : MonoBehaviour
 {
 
