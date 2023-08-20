@@ -43,6 +43,13 @@ public class BattleManager : MonoBehaviour
     {
         //general panel start logic
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
+        ResetBattle();
+        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+        DialogueManager.GetInstance().JumpToKnot(battleIntroKnotName);
+    }
+
+    private void ResetBattle()
+    {
         gameManager.playerMoves = false;
         gameObject.SetActive(true);
         attackMinigame.enabled = false;
@@ -63,9 +70,6 @@ public class BattleManager : MonoBehaviour
         enemyRemainingHealth = enemyTotalHealth;
         enemyHealthBar.SetMaxHealth(enemyTotalHealth); //https://www.youtube.com/watch?v=BLfNP4Sc_iA  06/04/2023
         enemyHighlight.enabled = false;
-
-        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
-        DialogueManager.GetInstance().JumpToKnot(battleIntroKnotName);
     }
 
     //make both parties take damage per turn
@@ -168,6 +172,7 @@ public class BattleManager : MonoBehaviour
 
     private void EndBattle()
     {
+        ResetBattle();
         gameManager.playerMoves = true;
         gameObject.SetActive(false);
     }
