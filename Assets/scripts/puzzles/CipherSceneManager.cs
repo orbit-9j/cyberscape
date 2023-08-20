@@ -20,8 +20,6 @@ public class CipherSceneManager : MonoBehaviour
 
         puzzle.GetComponent<DialogueTrigger>().variableNames = new List<string>() { "ciphertext", "key" };
         puzzle.GetComponent<DialogueTrigger>().variableValues = new List<string>() { ciphertext, encryptionKey.ToString() };
-
-        //pass manager variables into the puzzle script
     }
 
 

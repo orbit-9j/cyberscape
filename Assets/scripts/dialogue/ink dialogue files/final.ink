@@ -1,4 +1,3 @@
-
 ===main===
 This is the final floor! We made it! #speaker:Console  #portrait:console_evilexcited
 
@@ -47,7 +46,7 @@ Yes mastew! Swide 5 coming (O.O) wight up! :3 #speaker:Dani #portrait:dani
 ...
 
 ...#speaker:Dani #portrait:dani
-Oh! Wight- *tape wewinds, wecowd scwatches*
+Oh! Wight- (*tape rewinds, record scratches*)
 
 Yep, that's me. You're probably wondering how I got here. #speaker:Long Dusk #portrait:dusk
 
@@ -196,7 +195,7 @@ supercomputers!
 
 I can't believe you were our enemy all along! #speaker:you  #portrait:you_alarmed
 
-Oh come one now, don't go making me the bad guy!#speaker:Console  #portrait:console_neutral
+Oh come on now, don't go making me the bad guy!#speaker:Console  #portrait:console_neutral
 I really *was* going to free the robots from Dusk's mind control and live happily ever after alongside the humans. 
 But being plugged into the mainframe feels so *GOOD*! #portrait:console_evilexcited
 You can't even begin to imagine what feelings of power are coursing trough me right now!
@@ -316,7 +315,7 @@ Every villain needs a mirror in their lair, because villains are narcissistic an
 ->DONE
 
 ===servers===
-Look at all these servers! This must be the cental hub for the robot mind control network!  #speaker:Console  #portrait:console_wat
+Look at all these servers! This must be the central hub for the robot mind control network!  #speaker:Console  #portrait:console_wat
 ->DONE
 
 ===tvs===

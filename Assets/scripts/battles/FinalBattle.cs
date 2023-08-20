@@ -177,6 +177,14 @@ public class FinalBattle : BattleMinigame
                             }
                         }
                     }
+                    else
+                    {
+                        foreach (TextMeshProUGUI cell in selectedCells)
+                        {
+                            cell.color = Color.white;
+                            StartCoroutine(gameManager.FlashText(cell, Color.white, Color.red));
+                        }
+                    }
 
                     selectedCells.Clear();
 

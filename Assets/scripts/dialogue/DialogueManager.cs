@@ -5,7 +5,6 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-//using UnityEngine.UI; //imported to change choices panel colour
 
 //https://www.youtube.com/watch?v=vY0Sk93YUhA 12/02/2023
 //https://www.youtube.com/watch?v=tVrxeUIEV9E 13/02/2023
@@ -83,6 +82,7 @@ public class DialogueManager : MonoBehaviour
         foreach (GameObject choice in choices)
         {
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            choicesText[index].color = Color.black;
             index++;
         }
     }
@@ -97,8 +97,6 @@ public class DialogueManager : MonoBehaviour
         portraitAnimator.Play("default");
         layoutAnimator.Play(layoutThem);
         //choicesPanel.SetActive(false); //added to change overlay
-
-
 
         ContinueStory();
         //dialogueText.text = currentStory.currentText;
@@ -214,9 +212,6 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices()
     {
-        //choicesPanel.GetComponent<Image>().color.a = 0f;
-        //choicesPanel.SetActive(true); //added to change overlay
-        //choicesPanel.GetComponent<Image>().SetActive(true);//added to change overlay
         List<Choice> currentChoices = currentStory.currentChoices;
 
         if (currentChoices.Count > choices.Length)
@@ -229,6 +224,7 @@ public class DialogueManager : MonoBehaviour
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
+            choicesText[index].color = Color.white;
             index++;
         }
 
@@ -245,13 +241,14 @@ public class DialogueManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+        //ChoiceColour(0);
     }
 
     public void MakeChoice(int choiceIndex)
     {
+        //ChoiceColour(choiceIndex);
         currentStory.ChooseChoiceIndex(choiceIndex);
         InputManager.GetInstance().RegisterSubmitPressed();
-        //choicesPanel.SetActive(false); //added to change overlay
         ContinueStory();
     }
 
@@ -267,6 +264,15 @@ public class DialogueManager : MonoBehaviour
 
     //----------------------
     //own code:
+
+    /*   private void ChoiceColour(int choiceIndex)
+      {
+          foreach (GameObject choice in choices)
+          {
+              choice.gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+          }
+          choices[choiceIndex].gameObject.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
+      } */
 
     public void JumpToKnot(string knotName) //adds capability for te dialogue manager to start dialogue at a certain knot in the file, since each scene has one dialogue file for organisation purposes
     {

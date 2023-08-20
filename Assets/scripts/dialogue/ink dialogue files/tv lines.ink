@@ -11,8 +11,8 @@ Bucket Challenge in city square! (This is a Bring Your Own Lava event)
 ->DONE
 
 === tv2 ===
-Buy a jar of our brand new Orangest Orange pigment today! It's so bright that it has been banned in 369 countries for  
-causing blindness, fainting, and belief in Flat Sun! #speaker:TV presenter
+Buy a jar of our brand new Orangest Orange pigment today! It's so bright that it has been banned in 369 countries for  #speaker:TV presenter
+causing blindness, fainting, and belief in Flat Sun! 
 
 Oh no, they found the cause of the Flat Sun belief! I was hoping do study that for my dissertation... #speaker:you  #portrait:you_alarmed
 
@@ -33,8 +33,8 @@ Oh no, you fell for it... #speaker:Console #portrait:console_wat
 
 === tv4 ===
 Tired of the slow underground living? Are you missing the flying cars we had before the Space War? Allow us to introduce to you: #speaker:TV presenter 
- Sonic Shoes TM! They cover all your Gotta Go Fast needs and they can telepathically unlock doors - all for the low, low price of
-  This Is A Scam!
+Sonic Shoes TM! They cover all your Gotta Go Fast needs and they can telepathically unlock doors - all for the low, low price of
+This Is A Scam!
 
 Wow, it's somehow an even better deal than the Intend-To Glitch I got for the price of Clearly A Rip Off! #speaker:you   #portrait:you_alarmed
 
@@ -55,8 +55,8 @@ Then I don't think that smart watch was edible... #speaker:Console  #portrait:co
 
 ===tv6===
 Mildly Interesting News! In the past hour Ribbit has had 10 security breaches, which is 58% less than in the hour before. #speaker:TV presenter 
-Spectators are infuriated at the loss of their betting money, and we urge the Subterropolis city hacker team to get their
-&%£\# together PLEASE I BET ALL MY RENT MONEY ON YOU-
+Spectators are infuriated at the loss of their betting money, and we urge the Subterropolis city hacker team to get their &%£\# 
+together PLEASE I BET ALL MY RENT MONEY ON YOU-
 
 That's insane! Why is no one concerned about the breaches?! #speaker:Console  #portrait:console_wat
 

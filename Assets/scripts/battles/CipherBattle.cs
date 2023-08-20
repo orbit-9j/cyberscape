@@ -110,7 +110,7 @@ public class CipherBattle : BattleMinigame
                 }
                 else if (!encrypt && plaintext != ciphertextStr)
                 {
-                    gameManager.FlashText(plaintextMessage, Color.white, Color.red);
+                    StartCoroutine(gameManager.FlashText(plaintextMessage, Color.white, Color.red));
                 }
 
                 else if (encrypt && userInputKey == key)
@@ -119,7 +119,7 @@ public class CipherBattle : BattleMinigame
                 }
                 else if (encrypt && userInputKey != key)
                 {
-                    gameManager.FlashText(ciphertextMessage, Color.white, Color.red);
+                    StartCoroutine(gameManager.FlashText(ciphertextMessage, Color.white, Color.red));
                 }
             }
         }
