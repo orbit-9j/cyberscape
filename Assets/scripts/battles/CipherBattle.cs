@@ -35,7 +35,7 @@ public class CipherBattle : BattleMinigame
     private int nextKey;
     private int userInputKey;
 
-    private int numberOfRounds = 3;
+    private int numberOfRounds = 1;
     private int currentRound = 1;
     //bool solved = false;
 
@@ -47,6 +47,13 @@ public class CipherBattle : BattleMinigame
     {
         base.Start();
 
+        Decrypt();
+    }
+
+    public override void ResetMinigame()
+    {
+        currentRound = 1;
+        displacement = 0;
         ciphertextAlphabet.text = alphabet;
         plaintextMessage.text = "plaintext:";
         ciphertextMessage.text = "ciphertext:";

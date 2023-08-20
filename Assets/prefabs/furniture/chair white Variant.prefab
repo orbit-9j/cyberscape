@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 6627494, guid: 3aa2bc28bad70cc41879aa7ae9584cb7, type: 3}
     - target: {fileID: 3704278683209895879, guid: 3e2886e8c4be6904bbbf01c924313151, type: 3}
       propertyPath: m_Name
-      value: chair white
+      value: chair white Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7059119290098251572, guid: 3e2886e8c4be6904bbbf01c924313151, type: 3}
       propertyPath: m_RootOrder
@@ -61,3 +61,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e2886e8c4be6904bbbf01c924313151, type: 3}
+--- !u!1 &556807771477944208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3704278683209895879, guid: 3e2886e8c4be6904bbbf01c924313151, type: 3}
+  m_PrefabInstance: {fileID: 3806122647215515735}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4268500357063485312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556807771477944208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

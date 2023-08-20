@@ -15,12 +15,17 @@ public class GameManager : MonoBehaviour
     public string playerName = "You";
     public string consoleName = "Console";
 
-
     void Awake()
     {
         Instance = this;
         playerMoves = true;
         DontDestroyOnLoad(gameObject);
+
+    }
+    void Start()
+    {
+        PlayerPrefs.SetInt("endGame", false ? 1 : 0);
+        PlayerPrefs.Save();
     }
 
     //some methods that are used in more than one script

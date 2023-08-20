@@ -30,8 +30,13 @@ public class BattleManager : MonoBehaviour
     public Image enemyHighlight;
     [SerializeField] private GameObject enemy;
 
-    //next interaction
+    //interactions
     [SerializeField] private GameObject trigger;
+    [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private string battleIntroKnotName;
+    [SerializeField] private string afterBattleKnotName;
+    [SerializeField] private string BattleLossKnotName;
+    [SerializeField] private GameObject barrier;
 
 
     public void Start()
@@ -41,9 +46,9 @@ public class BattleManager : MonoBehaviour
         gameManager.playerMoves = false;
         gameObject.SetActive(true);
         attackMinigame.enabled = false;
-        defenceMinigame.enabled = true;
+        defenceMinigame.enabled = false;
         defence = true;
-        minigamePlaying = false;
+        minigamePlaying = false; //do i do anything with this variable? do i need it
         playerWin = false;
         battleStarted = false;
 
@@ -59,12 +64,8 @@ public class BattleManager : MonoBehaviour
         enemyHealthBar.SetMaxHealth(enemyTotalHealth); //https://www.youtube.com/watch?v=BLfNP4Sc_iA  06/04/2023
         enemyHighlight.enabled = false;
 
-        if (!battleStarted)
-        {
-            battleStarted = true;
-            StartCoroutine(StartTurn());
-        }
-
+        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+        DialogueManager.GetInstance().JumpToKnot(battleIntroKnotName);
     }
 
     //make both parties take damage per turn
@@ -75,13 +76,16 @@ public class BattleManager : MonoBehaviour
             //Debug.Log("defence");
             defenceMinigame.enabled = true;
             defenceMinigame.Start();
+            //defenceMinigame.ResetMinigame();
 
             while (!defenceMinigame.minigameEnded)
             {
+                //minigamePlaying = true;
                 yield return null;
             }
 
             defenceMinigame.enabled = false;
+            //minigamePlaying = false;
             defence = false;
         }
         else
@@ -92,10 +96,12 @@ public class BattleManager : MonoBehaviour
 
             while (!attackMinigame.minigameEnded)
             {
+                //minigamePlaying = true;
                 yield return null;
             }
 
             attackMinigame.enabled = false;
+            //minigamePlaying = false;
             defence = true;
         }
 
@@ -107,15 +113,14 @@ public class BattleManager : MonoBehaviour
         {
             if (playerRemainingHealth > enemyRemainingHealth)
             {
-                playerWin = true;
-                Destroy(enemy); //delete enemy object - it has been defeated
-                trigger.GetComponent<BoxCollider2D>().enabled = true; //enable the next interaction (e.g. the elevator button)
-                EndBattle();
+                GameWon();
             }
             else
             {
                 playerWin = false;
                 gameObject.SetActive(false); //exit battle and try again
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                DialogueManager.GetInstance().JumpToKnot(BattleLossKnotName);
                 EndBattle();
             }
 
@@ -123,8 +128,42 @@ public class BattleManager : MonoBehaviour
         }
     }
 
+    private void GameWon()
+    {
+        playerWin = true;
+
+        if (enemy != null)
+        {
+            Destroy(enemy); //delete enemy object - it has been defeated
+        }
+
+        if (trigger != null)
+        {
+            trigger.GetComponent<BoxCollider2D>().enabled = true; //enable the next interaction (e.g. the elevator button)
+        }
+
+        if (barrier != null)
+        {
+            Destroy(barrier);
+        }
+
+        DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+        DialogueManager.GetInstance().JumpToKnot(afterBattleKnotName);
+        EndBattle();
+    }
     void Update()
     {
+        if (!DialogueManager.GetInstance().dialogueIsPlaying && !battleStarted)//if dialogue has finished playing
+        {
+            Debug.Log("dialogue is not playing");
+            battleStarted = true;
+            StartCoroutine(StartTurn());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) //a battle bypass in case the battle bugs out, also easier to test
+        {
+            GameWon();
+        }
     }
 
     private void EndBattle()

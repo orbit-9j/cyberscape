@@ -69,7 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719970419031116667, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
       propertyPath: m_Size.y
-      value: 0.5765022
+      value: 0.64035
+      objectReference: {fileID: 0}
+    - target: {fileID: 719970419031116667, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 719970419031116667, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
       propertyPath: m_Offset.x
@@ -77,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719970419031116667, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
       propertyPath: m_Offset.y
-      value: -0.4071911
+      value: -0.3752672
       objectReference: {fileID: 0}
     - target: {fileID: 719970419031116667, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -89,3 +93,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
+--- !u!1 &1012378271101686320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 719970419031116662, guid: 96a5d44a5814b7d4da9482a1fd45d34d, type: 3}
+  m_PrefabInstance: {fileID: 572355057378695494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3461599022204560836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012378271101686320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

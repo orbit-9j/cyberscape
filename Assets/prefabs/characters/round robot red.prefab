@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4528213209313964587}
   - component: {fileID: 6010094820988705594}
   - component: {fileID: 7972854802007613298}
+  - component: {fileID: 1738167233760412999}
   m_Layer: 0
   m_Name: round robot red
   m_TagString: Untagged
@@ -154,3 +155,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1738167233760412999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976150200407306662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c326efafd715fb94fbf5f2133b61b123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
