@@ -26,7 +26,7 @@ Right now it's {currentValue} so the lunch food will be good, can't wait for our
 
 === clue5 ===
 I hate that managers always start their lunch break before us! Shouldn't it be the other way round? #speaker:science bot #portrait:Default 
-We're the ones who are keeping this company afloat!
+We're the ones who are keeping this company afloat! #quest:write a phishing email and send it through the info bot
 ->DONE
 
 === clue6 ===

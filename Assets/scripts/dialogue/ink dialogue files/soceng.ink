@@ -43,7 +43,7 @@ This floor isn't Long Dusk's lair, so it must be on a higher floor. Try the elev
 
 Looks like we need a keycard to go up any higher... #speaker:You  #portrait:you_confused
 
-Hmm, let's explore this floor and see if we can find any leads on where we can get one. #speaker:Console  #portrait:console_neutral
+Hmm, let's explore this floor and see if we can find any leads on where we can get one. #speaker:Console  #portrait:console_neutral #quest:find the most promising direction to go in
 
 ->DONE
 
@@ -116,7 +116,7 @@ contact information without checking if you even ordered anything first.
 I wouldn't. I never order anything online, I go dumpster diving instead. #speaker:You  #portrait:you_neutral
 
 That's because you're a lost cause. Most other people would. #speaker:Console #portrait:console_wat
-Anyway, let's find a way to contact an employee, and I will teach you how to take advantage of gullable people! #portrait:console_evilexcited
+Anyway, let's find a way to contact an employee, and I will teach you how to take advantage of gullible people! #portrait:console_evilexcited #quest:find a way to contact an employee
 
 -> DONE
 
@@ -132,7 +132,7 @@ You will be easily found out if you don't play your cards right. #portrait:conso
 How do we do this research then? #speaker:You  #portrait:you_confused
 
 Look around the room - these bots are complaining about the passcode to each other while their manager is away for lunch break. #speaker:Console #portrait:console_neutral
-Let's listen in on their conversation and see if we learn anything! #portrait:console_evilexcited
+Let's listen in on their conversation and see if we learn anything! #portrait:console_evilexcited #quest:listen in on the employee conversation
 
 ->DONE
 
@@ -245,13 +245,13 @@ The passcode for the door is {passcode}, please ensure that you remember it this
 wouldn't want to get either of us in trouble with management.
 Kind Regards, {receptionistName}
 
-We got the passcode! Let's go to the door and type it in to access the offices! #speaker:Console  #portrait:console_evilexcited
+We got the passcode! Let's go to the door and type it in to access the offices! #speaker:Console  #portrait:console_evilexcited #quest:unlock the door to the offices
 ->DONE 
 
 ===keypad===
 Hurry, lunchtime is almost over! #speaker:Console  #portrait:console_wat
 #puzzle:KeypadPanel
-Let's input the passcode in here now, it's {passcode}. #speaker:Console  #portrait:console_evilexcited
+Let's input the passcode in here now, it's {passcode}. #speaker:Console  #portrait:console_evilexcited 
 ->DONE
 
 ===reception===
@@ -330,7 +330,7 @@ What was that sound? #speaker:receptionist #portrait:Default
 ... #speaker:You #portrait:you_neutral
 
 ... #speaker:Console  #portrait:console_wat
-Run! #portrait:console_evilexcited
+Run! #portrait:console_evilexcited #quest:access the elevator
 
 ->DONE
 

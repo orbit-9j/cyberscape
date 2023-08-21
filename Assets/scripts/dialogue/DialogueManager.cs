@@ -47,11 +47,13 @@ public class DialogueManager : MonoBehaviour
     private Coroutine displayLineCoroutine;
     private const string layoutYou = "right";
     private const string layoutThem = "left";
+    private const string QUEST_TAG = "quest";
 
     private GameObject currentPuzzle;
 
     public string currentKnotName = "";
 
+    private questManager questManager;
 
 
     private void Awake()
@@ -73,6 +75,7 @@ public class DialogueManager : MonoBehaviour
         gameManager = GameObject.Find("game manager").GetComponent<GameManager>();
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+        questManager = GameObject.Find("quest manager").GetComponent<questManager>();
 
         layoutAnimator = dialoguePanel.GetComponent<Animator>();
 
@@ -201,6 +204,10 @@ public class DialogueManager : MonoBehaviour
 
                 case ENDGAME_TAG:
                     SceneManager.LoadScene(0, LoadSceneMode.Single);
+                    break;
+
+                case QUEST_TAG:
+                    questManager.updateQuest(tagValue);
                     break;
                 default:
                     Debug.Log("tag isn't currently being handled: " + tag);

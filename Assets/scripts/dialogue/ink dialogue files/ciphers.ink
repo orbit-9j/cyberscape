@@ -9,7 +9,7 @@ It must be on a different floor. #speaker:Console #portrait:console_neutral
 
 But there isn't a button for higher floors here, only down... #speaker:You #portrait:you_confused 
 
-Then the elevator must be controlled through some sort of signal rather than a button. Let's look around. #speaker:Console #portrait:console_neutral
+Then the elevator must be controlled through some sort of signal rather than a button. Let's look around. #speaker:Console #portrait:console_neutral #quest:talk to the group of robots
 ->DONE
 
 
@@ -140,7 +140,7 @@ I wanted to get Cavebuild for free! #speaker:You  #portrait:you_neutral
 People like you are the reason humans aren't a Type II civilisation yet! #speaker:Console  #portrait:console_evilexcited
 Nevermind. #portrait:console_neutral
 Let's go intercept a message from one of the robots and I will teach you how to break this cipher!  #portrait:console_evilexcited
-We need to find the cipher key to access the elevator again. #portrait:console_neutral
+We need to find the cipher key to access the elevator again. #portrait:console_neutral #quest:talk to the lone robot
 -> DONE
 
 VAR key = 0
@@ -230,7 +230,7 @@ I just want to get this over with so I can play Cavebuild! #portrait:you_neutral
 
 Anyway. From the brute force attack we now know that the message was encrypted with the key of {key}. #speaker:Console  #portrait:console_neutral
 This means that every letter in the original message was shifted to the letter {key} places away from it in the alphabet.
-We can now try to encrypt our own message and send it to the door to open it.
+We can now try to encrypt our own message and send it to the door to open it. #quest:access the elevator
 
 -> DONE
 

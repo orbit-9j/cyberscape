@@ -63,7 +63,7 @@ Don't you read the news?! Dusk has fired all cybersecurity teams to free up budg
 Alright, should be easy enough then. Let's finish your quest so I can go back to my game! #speaker:You #portrait:you_neutral
 
 How many times do I have to tell you, it isn't a real game... #speaker:Console #portrait:console_wat
-(Tip: press C to view game controls.) #portrait:console_neutral
+(Tip: press C to view game controls.) #portrait:console_neutral #quest:Infiltrate the Long Dusk Research Facility
 ->DONE
 
 

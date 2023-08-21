@@ -82,6 +82,8 @@ public class KeypadController : Puzzle
 
                             gameObject.SetActive(false);
 
+                            GameObject.Find("quest manager").GetComponent<questManager>().updateQuest("find a way to obtain a keycard");
+
                             Destroy(door);
                         }
                         else { pinText.color = Color.red; }

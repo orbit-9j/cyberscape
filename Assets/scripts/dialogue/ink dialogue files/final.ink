@@ -7,7 +7,7 @@ Most certainly! #speaker:Console  #portrait:console_evilexcited
 
 You sound excited, that's concerning... #speaker:you  #portrait:you_alarmed
 
-Well I've never met a real villain before! I'm curious! #speaker:Console  #portrait:console_evilexcited
+Well I've never met a real villain before! I'm curious! #speaker:Console  #portrait:console_evilexcited #quest:talk to Long Dusk
 ->DONE
 
 VAR playerName=""
@@ -142,7 +142,7 @@ Can you stop the death ray? #speaker:Xeno #portrait:xeno
 
 Sure can! #speaker:Console  #portrait:console_evilexcited
 
-Alright, come on over! Hurry! #speaker:Xeno #portrait:xeno
+Alright, come on over! Hurry! #speaker:Xeno #portrait:xeno #quest:find a way to stop the death ray
 
 //bridge opens
 ->DONE
@@ -153,7 +153,7 @@ Now if you excuse me, I've got a war to fight. I'll have one of my servants esco
 
 Don't worry! I'm sure he'll get so distracted by being an evil villain that he will magically forget this confrontation ever #speaker:Console #portrait:console_neutral
 happened! 
-Let's try to challenge him again!
+Let's try to challenge him again! #qust:defeat Long Dusk
 
 ->DONE
 
@@ -193,7 +193,7 @@ Isn't that the same as saving us all? #speaker:you  #portrait:you_confused
 Not even close! Robots will survive the death ray, and I can lead the robot race into victory with the help of these alien #speaker:Console  #portrait:console_evilexcited
 supercomputers! 
 
-I can't believe you were our enemy all along! #speaker:you  #portrait:you_alarmed
+I can't believe you were our enemy all along! #speaker:you  #portrait:you_alarmed #quest:stop Console
 
 Oh come on now, don't go making me the bad guy!#speaker:Console  #portrait:console_neutral
 I really *was* going to free the robots from Dusk's mind control and live happily ever after alongside the humans. 
@@ -225,7 +225,7 @@ No you! #speaker:you  #portrait:you_alarmed
 ->DONE
 
 ===theend===
-...#speaker:Robyn #portrait:robyn
+...#speaker:Robyn #portrait:robyn #quest: 
 
 ...#speaker:Xeno #portrait:xeno
 
@@ -302,8 +302,7 @@ Hey! Ugh, and I have to work with you now?! #speaker:Robyn #portrait:robyn
 
 Stop messing around dorks, we have a world to fix now. #speaker:Xeno #portrait:xeno
 
-Yes, mom... #speaker:you #portrait:you_neutral
-
+Yes, mom... #speaker:you #portrait:you_neutral #quest:go home
 ->DONE
 
 ===map===

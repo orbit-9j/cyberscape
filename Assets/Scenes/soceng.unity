@@ -34267,7 +34267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835371780733, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2543032835628367417, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34332,6 +34332,14 @@ PrefabInstance:
     - target: {fileID: 6639163147913415398, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7466505599336015463, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.1992798
+      objectReference: {fileID: 0}
+    - target: {fileID: 7466505599336015463, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.1605072
       objectReference: {fileID: 0}
     - target: {fileID: 7611044539585762164, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: minigame

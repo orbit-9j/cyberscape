@@ -1393,7 +1393,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 5
   m_Sprite: {fileID: -957621300, guid: 50d618b72c629d74a877741129ce0a22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -30155,7 +30155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1357075583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39760,6 +39760,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.470438
       objectReference: {fileID: 0}
+    - target: {fileID: 2543032835371780733, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2543032835628367417, guid: 09c17cff557dd25488e3de4aa5e73119, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.467405
@@ -40046,7 +40050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3469743685101887366, guid: 4403331e13c308a499b1fa6268542fd5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3469743685101887367, guid: 4403331e13c308a499b1fa6268542fd5, type: 3}
       propertyPath: m_FlipX

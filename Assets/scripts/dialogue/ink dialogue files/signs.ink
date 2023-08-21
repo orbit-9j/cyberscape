@@ -93,7 +93,7 @@ Those aren't genders silly, they're colours! #speaker:you  #portrait:you_neutral
 
 Do you think there will be a security office here? #speaker:you  #portrait:you_neutral
 
-This way seems more promising than any other door, so let's try it! #speaker:Console  #portrait:console_evilexcited
+This way seems more promising than any other door, so let's try it! #speaker:Console  #portrait:console_evilexcited #quest:try the offices door
 ->DONE
 
 ===labs===
